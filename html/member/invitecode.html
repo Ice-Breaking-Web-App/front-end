@@ -5,29 +5,89 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>CSS</title>
     <style> 
-      body{
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          background-color:#B2C9C6;
-          
-      }
-      footer{
-          margin: auto;
-      }
-      </style>
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color:#F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
+        footer{
+            margin: auto;
+        }
+        div { text-align: center;}
+
+        input.text-wrap{
+          text-align:center;
+          position:absolute;
+          left:50%;
+          right:50%;
+          transform: translate(-50%,-50%);
+          width:70%;
+          height:3%;
+          background-color:#F5FFFA;
+          border-radius: 10px;
+          border:0;
+          outline:0;
+        }
+
+        button.move{
+          position:absolute;
+          left: 50%;
+          right: 50%;
+          width: 80%;
+          height: 5%;
+          transform: translate(-50%,-50%);
+          background-color:#F5FFFA;
+          border-radius: 30px;
+          border:0;
+          outline:0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="menu.html" target="">
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-        <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+<body>
+    <section>
+        <header>
+            <a href="menu.html" target="">
+                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+            <a href="home.html" target="">
+                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
         
-    </header>
+        </header>
+    </section>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+<div style="padding:20px;"> </div>
+<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+
+<main>
+    <div style="padding:90px;"></div>
+    <div>
+        <p style="font-family:Noto Sans;">초대 코드를 입력해 주세요.</p>
+
+        <div style="padding:20px;"> </div>
+
+        <form action= 'answer_memberlist.html'>
+            <!--임시 action-->
+            <input class="text-wrap" type = "text" id="invite_code">
+            <div style="padding:90px;"></div>
+            <button class="move">입장하기</button>
+        </form>
+    </div>
+    
+    <div style="padding:40px;"></div>
+
+    <div>
+        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+
+</body>
 </html>
 

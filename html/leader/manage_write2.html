@@ -24,6 +24,32 @@
         }
         div { text-align: center;}
 
+        button.left_not_selected{
+          position:absolute;
+          left: 25%;
+          right: 75%;
+          width: 40%;
+          height: 5%;
+          transform: translate(-35%,-50%);
+          background-color:#FFFFFF;
+          border-radius: 10px 0px 0px 10px;
+          border:0;
+          outline:0;
+        }
+
+        button.right_selected{
+          position:absolute;
+          left: 75%;
+          right: 25%;
+          width: 40%;
+          height: 5%;
+          transform: translate(-65%,-50%);
+          background-color:#B2C9C6;
+          border-radius: 0px 10px 10px 0px;
+          border:0;
+          outline:0;
+        }
+
         button.previous{
           position:absolute;
           left: 25%;
@@ -49,7 +75,6 @@
           border:0;
           outline:0;
         }
-
     </style>
 </head>
 <body>
@@ -71,11 +96,22 @@
         <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
     </div>
 
-    <div style="padding:20px;"></div>
+    <div style="padding:10px;"></div>
 
     <div>
-        <progress value="0.33" style="width:90%;"></progress>
-        <p style="font-family:Noto-Sans; text-align:left;">질문 1. MBTI는 무엇인가요?</p>
+        <button class="left_not_selected" type="button" onclick="location.href='manage_team.html'">
+            팀원 현황
+        </button>
+        <button class="right_selected" type="button" onclick="window.location.reload()">
+            답변 작성
+        </button>
+    </div>
+
+    <div style="padding:40px;"></div>
+
+    <div>
+        <progress value="0.67" style="width:90%;"></progress>
+        <p style="font-family:Noto-Sans; text-align:left;">질문 2. MBTI는 무엇인가요?</p>
 
         <div style="padding:20px;"></div>
 
@@ -83,9 +119,10 @@
 
         <div style="padding:10px;"></div>
         
-        <form action="answer2.html">
-            <input type="text" id="answer1">
+        <form action="manage_write3.html">
+            <input type="text" id="answer2">
             <div style="padding:40px;"></div>
+            <button class="previous" type="button" onclick="location.href='manage_write.html'">이전으로</button>
             <button class="next">다음으로</button>
         </form>
     </div>

@@ -9,24 +9,68 @@
           display: flex;
           flex-direction: column;
           min-height: 100vh;
-          background-color:#B2C9C6;
+          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+      }
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
       }
       footer{
           margin: auto;
       }
+      div { text-align: center;}
+
+      button.move{
+          position:absolute;
+          left: 50%;
+          right: 50%;
+          width: 80%;
+          height: 5%;
+          transform: translate(-50%,-50%);
+          background-color:#F5FFFA;
+          border-radius: 30px;
+          border:0;
+          outline:0;
+        }
+
       </style>
 </head>
 <body>
-    <header>
-        <a href="menu.html" target="">
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-        <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+    <section>
+        <header>
+            <a href="menu.html" target="">
+                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+            <a href="home.html" target="">
+                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
         
-    </header>
+        </header>
+    </section>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
-</html>
+<div style="padding:20px;"> </div>
+<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
 
+<main>
+
+    <div style="padding:90px;"></div>
+    <div>
+        <p style="font-family:Noto Sans;">준비된 질문은 총 0개입니다.</p>
+        <p style="font-family:Noto Sans;">성실하게 답변해 주세요 :)</p>
+        <p style = "padding:10px;"> </p>
+        <p style="font-family:Noto Sans; color:gray;">*질문 별로 임시저장 됩니다.</p>
+    </div>
+    
+    <div style="padding:90px;"></div>
+        
+    <div>
+        <button class="move" type="button" onclick="location.href='answer.html'">
+            시작하기
+        </button>
+        <div style="padding:40px;"></div>
+        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+</main>
+</html>

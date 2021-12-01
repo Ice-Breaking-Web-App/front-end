@@ -5,32 +5,82 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>CSS</title>
     <style> 
-      body{
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          background-color:#B2C9C6;
-      }
-      footer{
-          margin: auto;
-      }
-      </style>
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color:#F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
+        footer{
+            margin: auto;
+        }
+        div { text-align: center;}
+
+        button.move{
+          position:absolute;
+          left: 50%;
+          right: 50%;
+          width: 80%;
+          height: 5%;
+          transform: translate(-50%,-50%);
+          background-color:#F5FFFA;
+          border-radius: 30px;
+          border:0;
+          outline:0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="menu.html" target="">
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-        <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+    <section>
+        <header>
+            <a href="menu.html" target="">
+                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+            <a href="home.html" target="">
+                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
         
-    </header>
-    <h1>
-        <a href="javascript:window.history.back()">
-            <img src = "\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
-    </h1>
+        </header>
+    </section>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+<div style="padding:20px;"> </div>
+<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+
+<main>
+    <div>
+        <h1>
+            <a href="javascript:window.history.back()">
+                <img src = "..\..\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
+        </h1>
+    </div>
+    <div style="padding:90px;"></div>
+
+    <div>
+        <p style="font-family:Noto Sans;"><img src="..\..\images\pay.jpg" alt="결제" border="0"></p>
+        <p style="font-family:Noto Sans;">[안내]</p>
+        <p style = "padding:10px;"> </p>
+        <p style="font-family:Noto Sans;">선택하신 기능은 업그레이드 이후</p>
+        <p style="font-family:Noto Sans;">사용 가능한 기능입니다. </p>
+        <p style = "padding:10px;"> </p>
+        <p style="font-family:Noto Sans;">확인 버튼을 누르시면 업그레이드를 위한</p>
+        <p style="font-family:Noto Sans;">결제 화면으로 넘어갑니다.</p>
+    </div>
+
+    <div style="padding:90px;"></div>
+
+    <div>
+        <button class="move" type="button" onclick="location.href='upgrade.html'">
+            확인
+        </button>
+        <div style="padding:40px;"></div>
+        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+</main>
 </html>
 

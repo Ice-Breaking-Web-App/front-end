@@ -49,7 +49,6 @@
           border:0;
           outline:0;
         }
-
     </style>
 </head>
 <body>
@@ -74,8 +73,8 @@
     <div style="padding:20px;"></div>
 
     <div>
-        <progress value="0.33" style="width:90%;"></progress>
-        <p style="font-family:Noto-Sans; text-align:left;">질문 1. MBTI는 무엇인가요?</p>
+        <progress value="1" style="width:90%;"></progress>
+        <p style="font-family:Noto-Sans; text-align:left;">질문 3. MBTI는 무엇인가요?</p>
 
         <div style="padding:20px;"></div>
 
@@ -83,9 +82,10 @@
 
         <div style="padding:10px;"></div>
         
-        <form action="answer2.html">
-            <input type="text" id="answer1">
+        <form action="answer_complete.html">
+            <input type="text" id="answer3">
             <div style="padding:40px;"></div>
+            <button class="previous" type="button" onclick="location.href='answer2.html'">이전으로</button>
             <button class="next">다음으로</button>
         </form>
     </div>
