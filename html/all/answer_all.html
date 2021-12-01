@@ -9,24 +9,49 @@
           display: flex;
           flex-direction: column;
           min-height: 100vh;
-          background-color:#B2C9C6;
+          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+      }
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
       }
       footer{
           margin: auto;
       }
+      div { text-align: center;}
       </style>
 </head>
+
 <body>
     <header>
         <a href="menu.html" target="">
             <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
         <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
-        
-    </header>
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
+    
+        </header>
+    
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+    <div style="padding:20px;"> </div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+<main>
+    <div style="padding:170px;"> </div>
+    <div>
+        <p style = "font-family:Noto Sans;">모든 팀원이 답변을 작성했습니다!</p>
+        <p style = "font-family:Noto Sans;">다른 팀원들의 답변을 맞추러 가볼까요?</p>
+    </div>
+    <div style="padding:110px;"> </div>
+    <div>
+    <!-- 이동하기버튼 -->
+    <a href="game_list.html" target="">
+        <img src="\images\icon_all\button\move.png" style = "width: 30%; height:30%;" alt="결과확인" border="0" align="center"></a>
+        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+    
+</main>
 </html>
 

@@ -9,29 +9,78 @@
           display: flex;
           flex-direction: column;
           min-height: 100vh;
-          background-color:#B2C9C6;
+          background:#F4EBE0;
       }
+
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
+      }
+
       footer{
           margin: auto;
       }
+
+      div { text-align: center;}
+
+      #blue{
+        padding:50px;
+        background-color: #B2C9C6;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+      }
+      
+      #white{
+        padding:300px;
+        background-color: #F5FFFA;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+      }
+
       </style>
 </head>
+
 <body>
     <header>
         <a href="menu.html" target="">
             <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
         <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
-        
-    </header>
-    <h1>
-        <p style = "font-family:Noto Sans;">00팀</p>
-        <a href="javascript:window.history.back()">
-            <img src = "\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
-    </h1>
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
+    
+        </header>
+
+        <div style="padding:50px;"> </div>
+        <!-- 뒤로 가기와 팀 이름 -->
+        <h1>
+            <p style = "font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
+            <div style="padding:90px;"> </div>
+            <a href="javascript:window.history.back()">
+                <img src = "\images\arrow_back_ios.png" style = "float:left; margin-left: 40px;" alt = "뒤로가기"></a>
+        </h1>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+    
+<main>
+    <div id = blue></div>
+    <div id = white></div>
+
+    <div style="padding:30px;"> </div>
+
+    <div>
+        <!-- 선택 버튼 -->
+        <a href="http://127.0.0.1:5500/html/member/answer.html" target="">
+            <img src="\images\icon_all\button\choose.png" style = "width: 30%; height:30%;" alt="결과확인" border="0" align="center"></a>
+            <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+    
+</main>
 </html>
+
 

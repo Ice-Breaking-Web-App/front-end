@@ -9,31 +9,89 @@
           display: flex;
           flex-direction: column;
           min-height: 100vh;
-          background-color:#B2C9C6;
+          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+      }
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
       }
       footer{
           margin: auto;
       }
-      
+      div { text-align: center;}
+      ul{
+          list-style:none;
+          padding-left:0px;
+        }
+      #circle1 {
+          background-color:#E59C9C;
+          width:100px;
+          height:100px;
+          border-radius:75px;
+          margin:0 auto;
+          margin-left: 30px;
+          margin-right: 30px;
+          text-align: left;
+          line-height:150px;
+          display: inline-block;
+        }
+        #square{
+            box-sizing: border-box;
+			width: 650px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: #FFFFFF;
+            border-radius: 50px 50px 50px 50px;
+            filter: alpha(opacity=40); opacity: 0.6; -moz-opacity:0.6;
+            display: inline-block;
+        }
       </style>
 </head>
 <body>
+    <!-- 홈 메뉴 버튼 -->
     <header>
         <a href="menu.html" target="">
             <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
         <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
-        
-    </header>
-    <h1>
-        <a href="javascript:window.history.back();">
-            <img src = "\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
-    </h1>
-    <p style = "font-family:Noto Sans;">내가 팀원인 팀</p>
-    </h2>
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
+    
+        </header>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+    <!-- 디자인 구현 -->
+    <div style="padding:20px;"> </div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+
+<main>  
+    <div style="padding:10px;"></div>
+    <!-- 홈 메뉴 버튼 -->
+    <h1>
+    <a href="javascript:window.history.back();">
+        <img src = "\images\arrow_back_ios.png" style = "float:left; margin-left: 30px;" alt = "뒤로가기"></a>
+    <div style="padding:50px;"></div>
+    <p style = "font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">내가 팀원인 팀</p>
+    </h1>
+    <hr style="border: solid 1px #C4C4C4; width: 95%; margin-left: 34px;">
+    <div style="padding:30px;"></div>
+
+    <!-- 팀 목록 -->
+    <ul>
+<li>
+    <div id="circle1"></div>
+    <div id="square">
+        <p div style="font-family:Noto Sans; color: black; font-size: 50px; font-weight: lighter; height: 500px; position: relative; left: 5px;  top: -35px;">팀 이름</p>
+    </div>
+    <div style="padding:20px;"></div>
+</li>
+    </ul>
+    
+<div>
+    <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+</div>
+
+</main>
 </html>
 

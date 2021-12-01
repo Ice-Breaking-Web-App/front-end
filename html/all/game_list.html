@@ -9,29 +9,69 @@
           display: flex;
           flex-direction: column;
           min-height: 100vh;
-          background-color:#B2C9C6;
+          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+      }
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
       }
       footer{
           margin: auto;
       }
-      
+      div { text-align: center;}
+      ul{
+          list-style:none;
+          padding-left:0px;
+        }
       </style>
 </head>
+
 <body>
     <header>
         <a href="menu.html" target="">
             <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
         <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
-        
-    </header>
-    <h1>
-        <p style = "font-family:Noto Sans;">00팀</p>
-    </h1>
-   
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
+    
+        </header>
 </body>
-<footer>
-    <p><img src="\images\logo.jpg" alt="로고" border="0" align="center"></p>
-</footer>
+
+    <div style="padding:20px;"> </div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+<main>
+    
+    <div style="padding:70px;"> </div>
+    <h1>
+        <p style = "font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
+    </h1>
+    <div>
+        <p style = "font-family:Noto Sans;">팀원들이 작성한 답변을 잘 읽고,</p>
+        <p style = "font-family:Noto Sans;">누가 작성한 답변인지 맞춰보세요!</p>
+    </div>
+    
+    <div style="padding:50px;"> </div>
+
+    <!-- 팀 목록 -->
+    <ul>
+        <li>
+            
+            <img src ="\images\membericon.png" style = "width: 10%; height:10%; margin-left: 40px;">
+            <div id="square"></div>
+            <div style="padding:20px;"></div>
+        </li>
+            </ul>
+
+    <!-- 결과확인버튼 -->
+    <div>
+    <a href="answer_all.html" target="">
+        <img src="\images\icon_all\button\solve.png" style = "width: 30%; height:30%;" alt="문제풀기" border="0" align="center"></a>
+        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+    
+</main>
 </html>
 
