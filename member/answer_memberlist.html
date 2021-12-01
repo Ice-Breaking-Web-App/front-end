@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CSS</title>
+    <style> 
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color:#F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
+        footer{
+            margin: auto;
+        }
+        div { text-align: center;}
+
+        button.move{
+          position:absolute;
+          left: 50%;
+          right: 50%;
+          width: 80%;
+          height: 5%;
+          transform: translate(-50%,-50%);
+          background-color:#F5FFFA;
+          border-radius: 30px;
+          border:0;
+          outline:0;
+        }
+
+        ol{
+            counter-reset:item;
+            list-style-type:none;
+        }
+        li{
+            display: block;
+        }
+         li:before{
+            content:counter(item)" ";
+            counter-increment:item;
+        }
+      </style>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="menu.html" target="">
+                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+            <a href="home.html" target="">
+                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
+        
+        </header>
+    </section>
+</body>
+<div style="padding:20px;"> </div>
+<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+
+<main>
+    <div>
+        <p style="font-family:Noto Sans;">00팀에 오신 것을 환영합니다!.</p>
+        <p style="font-family:Noto Sans;">당신의 이름을 선택해 주세요.</p>
+
+        <!--리스트 정렬 및 CSS 필요-->
+
+        <div style="overflow: auto">
+            <ol style="text-align:center; height: 355px; overflow:auto">
+                <li><img src = "..\..\images\leadericon.jpg"><span>이름     </span>참여중</li>
+                <li><img src = "..\..\images\membericon.jpg"><span>이름     </span>참여중</li>
+                <li><img src = "..\..\images\membericon.jpg"><span>이름     </span>✔완료</li>
+                <li><img src = "..\..\images\membericon.jpg"><span>이름     </span></li>
+                <li><img src = "..\..\images\membericon.jpg"><span>이름     </span></li>
+            </ol>
+        </div>
+    </div>
+
+    <div style="padding:90px;"></div>
+
+    <div>
+        <button class="move" type="button" onclick="location.href='answer_start.html'">
+            선택 완료
+        </button>
+        <div style="padding:40px;"></div>
+        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+</main>
+</html>
+

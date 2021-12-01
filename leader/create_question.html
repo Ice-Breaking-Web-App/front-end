@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CSS</title>
+    <style> 
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color:#F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
+        footer{
+            margin: auto;
+        }
+        div { text-align: center;}
+
+        button.move{
+          position:absolute;
+          left: 50%;
+          right: 50%;
+          width: 80%;
+          height: 5%;
+          transform: translate(-50%,-50%);
+          background-color:#F5FFFA;
+          border-radius: 30px;
+          border:0;
+          outline:0;
+        }
+
+        ol{
+            counter-reset:item;
+            list-style-type:none;
+        }
+        li{
+            display: block;
+        }
+        li:before{
+            content:"질문 "counter(item)".";
+            counter-increment:item;
+        }
+    </style>
+      
+      
+</head>
+<body>
+    <section>
+        <header>
+            <a href="menu.html" target="">
+                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+            <a href="home.html" target="">
+                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
+        
+        </header>
+    </section>
+</body>
+<div style="padding:20px;"> </div>
+<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+
+<main>
+    <div>
+        <p style="font-family:Noto Sans;">00팀이 서로 친해질 수 있도록</p>
+        <p style="font-family:Noto Sans;">질문을 작성해 주세요 :)</p>
+
+        <div style="padding:10px;"></div>
+
+        <form method="post" action="create_member.html">
+            <!--임시 action-->
+            <!--리스트 정렬 및 CSS 필요-->
+            <div style="width:95%; height:355px; overflow:auto">
+                <ol id = 'questions'>
+                    <li>
+                        <button type="button" onclick="deleteList(this);">X</button><br><input type="text" id="question" placeholder="질문 입력">
+                        <!--추천 질문, 추천 질문 새로고침 구현 필요-->
+                        <br>
+                        <button type="button" onclick="autofill();">MBTI</button>
+                        <button type="button" onclick="autofill();">영화</button>
+                        <button type="button" onclick="autofill();">음식</button>
+                        <img src="..\..\images\refresh.jpg" onclick='refreshRecommendations()' alt="추천 새로고침">
+                    </li>
+                    <li>
+                        <button type="button" onclick="deleteList(this);">X</button><br><input type="text" id="question" placeholder="질문 입력">
+                    </li>
+                    <li>
+                        <button type="button" onclick="deleteList(this);">X</button><br><input type="text" id="question" placeholder="질문 입력">
+                    </li>
+                </ol>
+            </div>
+            <div style="padding:10px;"></div>
+            <img src="..\..\images\more.jpg" onclick='addList()' alt="추가">
+            <div style="padding:40px;"></div>
+            <button class="move">다음으로</button>
+        </form>
+    </div>
+
+    <div style="padding:40px;"></div>
+
+    <div>
+        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+    </div>
+
+</main>
+<script>
+
+    function addList(){
+
+        const addValue = document.createElement("addValue");
+
+        addValue.innerHTML = "<button type='button' onclick='deleteList2(this);''>X</button><br><input type='text' id='question' placeholder='질문 입력'>";
+
+        const li = document.createElement("li");
+
+        li.appendChild(addValue);
+
+        li.setAttribute('id',addValue);
+
+        document
+            .getElementById('questions')
+            .appendChild(li);
+    }
+    
+    function deleteList(obj){
+        var p=obj.parentNode;
+        p.parentNode.removeChild(p);
+    }
+
+    function deleteList2(obj){
+        var p=obj.parentNode.parentNode;
+        p.parentNode.removeChild(p);
+    }
+</script>
+</html>
+
