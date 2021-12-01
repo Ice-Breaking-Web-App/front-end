@@ -27,6 +27,28 @@
           list-style:none;
           padding-left:0px;
         }
+        #number{
+            font-family:Noto Sans;
+            font-size: 30px;
+            text-align: left;
+            margin-left: 100px;
+            display: inline-block;
+        }
+        #name{
+            font-family:Noto Sans;
+            font-size: 30px;
+            text-align: left;
+            margin-left: 100px;
+            display: inline-block;
+        }
+        #score{
+            font-family:Noto Sans;
+            color: #aaaaaa;
+            font-size: 30px;
+            text-align: left;
+            margin-left: 150px;
+            display: inline-block;
+        }
       </style>
 </head>
 
@@ -49,25 +71,33 @@
         <p style = "font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
     </h1>
     <div>
-        <p style = "font-family:Noto Sans;">팀원들이 작성한 답변을 잘 읽고,</p>
-        <p style = "font-family:Noto Sans;">누가 작성한 답변인지 맞춰보세요!</p>
+        <p style = "font-family:Noto Sans; font-size: 30px;">팀원들이 작성한 답변을 잘 읽고,</p>
+        <p style = "font-family:Noto Sans; font-size: 30px;">누가 작성한 답변인지 맞춰보세요!</p>
     </div>
     
     <div style="padding:50px;"> </div>
 
-    <!-- 팀 목록 -->
+    <!-- 결과 순위 -->
     <ul>
         <li>
-            
-            <img src ="\images\membericon.png" style = "width: 10%; height:10%; margin-left: 40px;">
-            <div id="square"></div>
+            <div id = "number">1</div>
+            <img src ="\images\leadericon.png" style = "width: 7%; height:7%; margin-left: 80px;">
+            <div id= "name">이름</div>
+            <div id= "score">팀장</div>
+            <div style="padding:20px;"></div>
+
+            <div id = "number">2</div>
+            <img src ="\images\membericon.png" style = "width: 7%; height:7%; margin-left: 80px;">
+            <div id= "name">이름</div>
+            <div id= "score">팀원</div>
             <div style="padding:20px;"></div>
         </li>
             </ul>
 
-    <!-- 결과확인버튼 -->
+    <!-- 문제풀기 버튼 -->
+    <div style="padding:30px;"></div>
     <div>
-    <a href="answer_all.html" target="">
+    <a href="game_board.html" target="">
         <img src="\images\icon_all\button\solve.png" style = "width: 30%; height:30%;" alt="문제풀기" border="0" align="center"></a>
         <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
     </div>

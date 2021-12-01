@@ -16,9 +16,6 @@
           display: flex;
           flex-direction: column;
           min-height: 80vh;
-          background-color:#F4EBE0;
-          border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em
       }
 
       footer{
@@ -27,22 +24,22 @@
 
       div { text-align: center;}
 
-      #blue{
+      .blue{
         padding:50px;
         background-color: #B2C9C6;
         margin-left: 100px;
         margin-right: 100px;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
       }
       
-      #white{
-        padding:300px;
-        background-color: #F5FFFA;
+      .white{
+        padding:150px;
+        background-color: #FFFFFF;
         margin-left: 100px;
         margin-right: 100px;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
       }
 
       </style>
@@ -68,14 +65,27 @@
 </body>
     
 <main>
-    <div id = blue></div>
-    <div id = white></div>
+    <div class = "blue">
+        <p style = "font-family:Noto Sans; font-size: 30px;  float:left;">Q1. 질문 1번 </p>
+    </div>
+
+    <div class = "white">
+        <p style = "font-family:Noto Sans; font-size: 30px;  float:left;">답변</p>
+    </div>
+
+    <div class = "white">
+        <img src ="\images\membericon.png" style = "width: 10%; height:10%; display: inline-block;">
+        <p style = "font-family:Noto Sans; font-size: 30px;  margin-left: 20px; display: inline-block;">이름</p>
+        <a href="game_choose.html" target="">
+            <img src ="\images\icon_all\button\back.png" style = "width: 30%; height:10%; margin-left: 150px;">
+        </a>
+        </div>
 
     <div style="padding:30px;"> </div>
 
     <div>
         <!-- 선택 버튼 -->
-        <a href="http://127.0.0.1:5500/html/member/answer.html" target="">
+        <a href="game_choose.html" target="">
             <img src="\images\icon_all\button\choose.png" style = "width: 30%; height:30%;" alt="결과확인" border="0" align="center"></a>
             <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
     </div>
