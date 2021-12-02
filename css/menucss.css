@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+input[id="menuicon"] {
+    display: none;
+}
+/*체크박스가 보이지 않도록 설정*/
+input[id="menuicon"] + label {
+    display: block;
+    margin : 5px;
+    width: 15px;
+    height: 10px;
+    position: fixed;
+    right: 15px;
+    top : 25px;
+    cursor: pointer;
+}
+/*인접요소 선택자인 +로 label을 선택하고 레이아웃 배치
+커서가 올라가면 포인터 값이 바뀌도록 설정*/
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px; /*모서리 둥글게*/ 
+    background: #999999;
+    transition: all .35s; /*움직이는 모션 적용*/
+}
+/*햄버거 메뉴바 만들기*/
+input[id="menuicon"] + label span:nth-child(1) {
+    top:0;
+}
+input[id="menuicon"] + label span:nth-child(2){
+    top:50%;
+    transform : translateY(-50%);/*정렬시키려는 대상의 가운데를 정렬시키기*/
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom:0;
+}
+/*각 막대기 마다 위치 지정*/
+input[id="menuicon"]:checked + label {
+    z-index: 2;
+
+}
+input[id="menuicon"]:checked + label span {
+    background: #999999;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%) rotate(45deg); /*rotate(45deg) 45도 회전*/
+}
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+/*체크 되었을 때 span의 요소별 변화*/
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background:#222;
+    opacity : 0.38;
+    position: fixed; /*스크롤해도 넘어가지 안흠*/
+    top: 0;
+    right: -300px; /*처음에는 창 밖으로 보내기 위하여*/ 
+    z-index: 1;/*레이어 값의 우선순위*/
+    transition: all .35s; /*애니메이션 효과*/
+}
+input[id="menuicon"]:checked + label + div {
+    right:0;
+}
+/*사이드 바의 위치 지정*/
