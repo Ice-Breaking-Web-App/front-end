@@ -54,9 +54,9 @@
     <section>
         <header>
             <a href="menu.html" target="">
-                <img src = "..\..\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
+                <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
             <a href="home.html" target="">
-                <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈"></a>
+                <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
         
         </header>
     </section>
@@ -68,7 +68,7 @@
     <div>
         <h1>
             <a href="javascript:window.history.back()">
-                <img src = "..\..\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
+                <img src = "\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
         </h1>
     </div>
 
@@ -84,18 +84,18 @@
             <div style="width:95%; height:355px; overflow:auto">
                 <ol id = 'member_names'>
                     <li>
-                        <img src = "..\..\images\leadericon.jpg" style="width:5%; height:5%;" alt="팀장아이콘">팀장이름
+                        <img src = "\images\leadericon.png" style="width:5%; height:5%;" alt="팀장아이콘">팀장이름
                     </li>
                     <li>
-                        <img src = "..\..\images\membericon.jpg" style="width:5%; height:5%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
+                        <img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
                     </li>
                     <li>
-                        <img src = "..\..\images\membericon.jpg" style="width:5%; height:5%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
+                        <img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
                     </li>
                 </ol>
             </div>
             <div style="padding:10px;"></div>
-            <img src="..\..\images\more.jpg" onclick='addList()' alt="추가">
+            <img src="\images\more.jpg" onclick='addList()' alt="추가">
             <div style="padding:40px;"></div>
             <button class="move">완료하기</button>
         </form>
@@ -104,7 +104,7 @@
     <div style="padding:40px;"></div>
 
     <div>
-        <p><img src="..\..\images\logo.jpg" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
     </div>
 </main>
 <script>
@@ -113,7 +113,7 @@
 
         const addValue = document.createElement("addValue");
 
-        addValue.innerHTML = "<img src='../../images/membericon.jpg' style='width:5%; height:5%;' alt='팀원아이콘'><input type='text' id='member_name' placeholder='이름'><button type='button' onclick='deleteList2(this);'>X</button>";
+        addValue.innerHTML = "<img src='/images/membericon.png' style='width:5%; height:5%;' alt='팀원아이콘'><input type='text' id='member_name' placeholder='이름'><button type='button' onclick='deleteList2(this);'>X</button>";
 
         const li = document.createElement("li");
 
