@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
-    <style> 
-      body{
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
-      }
-      main{
-          display: flex;
-          flex-direction: column;
-          min-height: 80vh;
-          background-color:#F4EBE0;
-          border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em
-      }
-      footer{
-          margin: auto;
-      }
-      div { text-align: center;}
-      </style>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <title>answer_wait</title>
+    <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color: #F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <a href="menu.html" target="">
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-        <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
-    
-        </header>
-    
-</body>
-    <div style="padding:20px;"> </div>
-    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
-
-<main>
-    
-    <div style="padding:70px;"> </div>
-    <div>
-        <p><img src="\images\warning.png" style = "width: 10%; height:10%;" alt="안내아이콘" border="0" align="center"></p>
-        <p style = "font-family:Noto Sans;">[ 안내 ]</p>
-        <p style = "padding:10px;"> </p>
-        <p style = "font-family:Noto Sans;">아직 답변을 작성하지 않은 팀원이 있어요!</p>
-        <p style = "font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>    
-        <p style = "font-family:Noto Sans;">게임으로 이동할 수 있습니다.</p>    
-    </div>
-    <div style="padding:20px;"> </div>
-    <div>
-    <a onClick="window.location.reload()" style="cursor: pointer;">
-        <img src="\images\answer_refresh.png" alt="새로고침" border="0" align="center"></a>
+    <!--홈, 메뉴 버튼-->
+    <section>
+        <a href="../all/home.html" target="">
+            <img src="\images\home.jpg" style="float:right" alt="홈">
         </a>
-        <div style="padding:50px;"> </div>
-        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-    </div>
-    
-</main>
-</html>
 
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
+
+    </section>
+    <div style="padding:20px;"> </div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
+    </div>
+
+    <main>
+        <div style="padding:70px;"> </div>
+        <div>
+            <p><img src="\images\warning.png" style="width: 10%; height:10%;" alt="안내아이콘" border="0" align="center"></p>
+            <p style="font-family:Noto Sans;">[ 안내 ]</p>
+            <p style="padding:10px;"> </p>
+            <p style="font-family:Noto Sans;">아직 답변을 작성하지 않은 팀원이 있어요!</p>
+            <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
+            <p style="font-family:Noto Sans;">게임으로 이동할 수 있습니다.</p>
+        </div>
+        <div style="padding:20px;"> </div>
+        <div>
+            <a onClick="window.location.reload()" style="cursor: pointer;">
+                <img src="\images\answer_refresh.png" alt="새로고침" border="0" align="center"></a>
+            </a>
+            <div style="padding:50px;"> </div>
+            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+        </div>
+    </main>
+</body>
+
+</html>

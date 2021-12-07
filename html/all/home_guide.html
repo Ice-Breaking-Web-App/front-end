@@ -1,82 +1,130 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
-    <style> 
-      body{
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          background-color:#616161af;
-      }
-      footer{
-          margin: auto;
-          text-align: center;
-      }
-      div { text-align: center;}
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ICE BREAKER</title>
+    <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #F4EBE0;
+            text-align: center;
+        }
+        .home{
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            right: 35px;
+            float: right;
+        }
+        .mainlogo {
+            width: 50%;
+            height: 50%;
+            position: relative;
+            top: 60px;
+        }
 
-      </style>
+        .button {
+            width: 25%;
+            height: 25%;
+            position: relative;
+            top: 100px;
+            word-break: break-all;
+        }
+
+        .logo1 {
+            max-width: 20%;
+            max-height: 20%;
+            position: relative;
+            bottom: -150px;
+        }
+    </style>
 </head>
+
 <body>
+
+    <!--홈, 메뉴 버튼-->
     <section>
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈">
-        </section>
+        <a href="../all/home.html" target="">
+            <img src="\images\home.png" alt="홈" class = "home">
+        </a>
 
-    <div style="padding:50px;"> </div>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
 
+    </section>
+
+    <!-- ice breaker 메인 로고-->
     <div>
-        <h1>
-            <p><img src="\images\icon_all\home\ICE BREAKER.png" style = "width: 50%; height:50%;" alt="프로젝트" border="0" align="center">
-            </p>
-        </h1>
-    <div style="padding:30px;"> </div>
-        <h2>
-            <img src = "\images\icon_all\home\button_new.png" style = "width: 25%; height:25%;" alt = "메뉴">
-        </h2>    
-        <h3>
-            <img src = "\images\icon_all\home\button_invite.png" style = "width: 25%; height:25%;" alt = "홈">
-        </h3>
+        <img src="\images\icon_all\home\ICE BREAKER.png" alt="프로젝트" class="mainlogo">
+    </div>
+
+    <!--새로운 방 버튼-->
+    <div>
+        <img src="\images\icon_all\home\button_new.png" alt="방 생성하기" class="button">
+    </div>
+
+    <!--초대코드 입력하기 버튼-->
+    <div>
+        <img src="\images\icon_all\home\button_invite.png" alt="초대코드 입력하기" class="button">
     </div>
 
     <!-- 화살표 -->
-    <div id ="vector1">
-        <img src = "\images\icon_all\guide\guide_vector1.png" alt = "화살표">
+    <div id="vector1">
+        <img src="\images\icon_all\guide\guide_vector1.png" alt="화살표" class= "vector1">
     </div>
-    <div id ="vector2">
-        <img src = "\images\icon_all\guide\guide_vector2.png" alt = "화살표">
+    <div id="vector2">
+        <img src="\images\icon_all\guide\guide_vector2.png" alt="화살표" class= "vector2">
     </div>
-    <div id ="vector3">
-        <img src = "\images\icon_all\guide\guide_vector3.png" alt = "화살표">
+    <div id="vector3">
+        <img src="\images\icon_all\guide\guide_vector3.png" alt="화살표" class= "vector3">
     </div>
-    <div id ="vector4">
-        <img src = "\images\icon_all\guide\guide_vector4.png" alt = "화살표">
+    <div id="vector4">
+        <img src="\images\icon_all\guide\guide_vector4.png" alt="화살표"class= "vector4">
     </div>
 
     <!-- 가이드 -->
-    <div id ="txthome">
-        <img src = "\images\icon_all\guide\txthome.png" alt = "화살표">
+    <div id="txthome">
+        <img src="\images\icon_all\guide\txthome.png" alt="화살표">
     </div>
-    <div id ="txtleader">
-        <img src = "\images\icon_all\guide\txtleader.png" alt = "화살표">
+    <div id="txtleader">
+        <img src="\images\icon_all\guide\txtleader.png" alt="화살표">
     </div>
-    <div id ="txtmem">
-        <img src = "\images\icon_all\guide\txtmem.png" alt = "화살표">
+    <div id="txtmem">
+        <img src="\images\icon_all\guide\txtmem.png" alt="화살표">
     </div>
-    <div id ="txtmenu">
-        <img src = "\images\icon_all\guide\txtmenu.png" alt = "화살표">
+    <div id="txtmenu">
+        <img src="\images\icon_all\guide\txtmenu.png" alt="화살표">
     </div>
 
-    <div id ="txtscreen">
+    <div id="txtscreen">
         <a href="home.html" target="">
-        <img src = "\images\icon_all\guide\txtscreen.png" alt = "화살표"></a>
+            <img src="\images\icon_all\guide\txtscreen.png" alt="화살표"></a>
     </div>
+
+    <!--하단 로고-->
+    <footer>
+        <img src="\images\logo.png" alt="로고" class="logo1">
+    </footer>
 
 </body>
-<footer>
-    <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-</footer>
-</html>
 
+
+</html>

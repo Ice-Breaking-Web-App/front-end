@@ -1,119 +1,136 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
-    <style> 
-      body{
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          background:#F4EBE0;
-      }
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <title>game_board</title>
+    <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
 
-      main{
-          display: flex;
-          flex-direction: column;
-          min-height: 80vh;
-      }
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #F4EBE0;
+        }
 
-      footer{
-          margin: auto;
-      }
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+        }
 
-      div { text-align: center;}
+        div {
+            text-align: center;
+        }
 
-      .blue{
-        padding:50px;
-        background-color: #B2C9C6;
-        margin-left: 100px;
-        margin-right: 100px;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-      }
-      
-      .white{
-        padding:150px;
-        background-color: #FFFFFF;
-        margin-left: 100px;
-        margin-right: 100px;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-      }
+        .blue {
+            padding: 50px;
+            background-color: #B2C9C6;
+            margin-left: 100px;
+            margin-right: 100px;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+        }
 
-      ul{
-        list-style:none;
-        padding-left:0px;
-      }
+        .white {
+            padding: 150px;
+            background-color: #FFFFFF;
+            margin-left: 100px;
+            margin-right: 100px;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em;
+        }
 
-      #square{
-        box-sizing: border-box;
-		width: 550px;
-		height: 100px;
-		margin: 0 auto;
-		background-color: #ad8b7dbe;
-        border-radius: 50px 50px 50px 50px;
-        filter: alpha(opacity=40); opacity: 0.6; -moz-opacity:0.6;
-        display: inline-block;
-      }
-    
-      </style>
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        #square {
+            box-sizing: border-box;
+            width: 550px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #ad8b7dbe;
+            border-radius: 50px 50px 50px 50px;
+            filter: alpha(opacity=40);
+            opacity: 0.6;
+            -moz-opacity: 0.6;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <a href="menu.html" target="">
-            <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-        <a href="home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>  
-    
-        </header>
+    <!--홈, 메뉴 버튼-->
+    <section>
+        <a href="../all/home.html" target="">
+            <img src="\images\home.jpg" style="float:right" alt="홈">
+        </a>
 
-        <div style="padding:50px;"> </div>
-        <!-- 뒤로 가기와 팀 이름 -->
-        <h1>
-            <p style = "font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
-            <div style="padding:90px;"> </div>
-            <a href="javascript:window.history.back()">
-                <img src = "\images\arrow_back_ios.png" style = "float:left; margin-left: 40px;" alt = "뒤로가기"></a>
-        </h1>
-</body>
-    
-<main>
-    <div class = "blue">
-        <p style = "font-family:Noto Sans; font-size: 30px; float:left;">Q1. 질문 1번 </p>
-    </div>
-
-    <div class = "white">
-        <ul>
-            <li>
-                <div id="square">
-                    <img src ="\images\boardicon.png" style = "height:60%; float: left; margin-left: 20px;">
-                    <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
-                    </div>
-                <div style="padding:20px;"></div>
-
-                <div id="square">
-                    <img src ="\images\boardicon.png" style = "height:60%; float: left; margin-left: 20px;">
-                    <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
-                    </div>
-                <div style="padding:20px;"></div>
-
-            </li>
-        </ul>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
         </div>
 
-    <div style="padding:30px;"> </div>
+    </section>
 
-    <div>
-        <!-- 선택 버튼 -->
-        <a href="game_resultboard.html" target="">
-            <img src="\images\icon_all\button\next.png" style = "width: 30%; height:30%;" alt="결과확인" border="0" align="center"></a>
-            <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-    </div>
-    
-</main>
+    <div style="padding:50px;"> </div>
+    <!-- 뒤로 가기와 팀 이름 -->
+    <h1>
+        <p style="font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
+        <div style="padding:90px;"> </div>
+        <a href="javascript:window.history.back()">
+            <img src="\images\arrow_back_ios.png" style="float:left; margin-left: 40px;" alt="뒤로가기"></a>
+    </h1>
+
+    <main>
+        <div class="blue">
+            <p style="font-family:Noto Sans; font-size: 30px; float:left;">Q1. 질문 1번 </p>
+        </div>
+
+        <div class="white">
+            <ul>
+                <li>
+                    <div id="square">
+                        <img src="\images\boardicon.png" style="height:60%; float: left; margin-left: 20px;">
+                        <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
+                    </div>
+                    <div style="padding:20px;"></div>
+
+                    <div id="square">
+                        <img src="\images\boardicon.png" style="height:60%; float: left; margin-left: 20px;">
+                        <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
+                    </div>
+                    <div style="padding:20px;"></div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div style="padding:30px;"> </div>
+
+        <div>
+            <!-- 선택 버튼 -->
+            <a href="game_resultboard.html" target="">
+                <img src="\images\icon_all\button\next.png" style="width: 30%; height:30%;" alt="결과확인" border="0"
+                    align="center"></a>
+            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+        </div>
+
+    </main>
+</body>
+
 </html>
-
-
