@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
+    <title>ICE BREAKER</title>
+    <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
       body{
           display: flex;
@@ -14,23 +15,40 @@
       main{
           display: flex;
           flex-direction: column;
-          min-height: 80vh;
+          min-height: 90vh;
           background-color:#F4EBE0;
           border-bottom-left-radius: 1em;
           border-bottom-right-radius: 1em
       }
-      footer{
-          margin: auto;
-      }
+
       div { text-align: center;}
+
+      div.announcement{
+        position:absolute;
+        left: 50%;
+        right:50%; top:35%;
+        transform:translate(-50%,-50%);
+        width: 70%;
+      }
+
+      div.logo{
+          position:absolute;
+          left:50%;
+          right:50%;
+          top:90%;
+          transform: translate(-50%, -50%);
+          width:20%;
+          height:20%;
+      }
 
       button.move{
           position:absolute;
           left: 50%;
           right: 50%;
+          top: 75%;
+          transform: translate(-50%,-50%);
           width: 80%;
           height: 5%;
-          transform: translate(-50%,-50%);
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
@@ -40,38 +58,45 @@
 </head>
 <body>
     <section>
-        <header>
-            <a href="menu.html" target="">
-                <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-            <a href="home.html" target="">
-                <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+        <a href="../all/home.html" target="">
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈">
+        </a>
         
-        </header>
+        <input type="checkbox" id ="menuicon">
+        <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
+
     </section>
-</body>
-<div style="padding:20px;"> </div>
-<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+    <div style="padding:1%; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
 
-<main>
-
-    <div style="padding:90px;"></div>
-    <div>
-        <p><img src="\images\warning.png" style="width:10%; height:10%;" alt="안내아이콘" border="0"></p>
-        <p style="font-family:Noto Sans;">[안내]</p>
-        <p style = "padding:10px;"> </p>
-        <p style="font-family:Noto Sans;">잘못된 초대 코드를 입력하셨습니다.</p>
-        <p style="font-family:Noto Sans;">다시 입력해주세요.</p>
-    </div>
-    
-    <div style="padding:90px;"></div>
+    <main>
+        <div class="announcement">
+            <p><img src="..\..\images\warning.png" style="width:10%; height:10%;" alt="안내아이콘" border="0"></p>
+            <p style="font-family:Noto Sans;">[안내]</p>
+            <p style = "padding:1%;"> </p>
+            <p style="font-family:Noto Sans;">잘못된 초대 코드를 입력하셨습니다.</p>
+            <p style="font-family:Noto Sans;">다시 입력해주세요.</p>
+        </div>
         
-    <div>
         <button class="move" type="button" onclick="location.href='invitecode.html'">
             이전으로
         </button>
-        <div style="padding:40px;"></div>
-        <p style="text-align:center;"><img src="\images\logo.png" alt="로고" border="0"></p>
-    </div>
-</main>
+        <div class="logo">
+            <p><img src="..\..\images\logo.png" style = "width: 100%; height:100%;" alt="로고" border="0" align="center"></p>
+        </div>
+    </main>
+
+</body>
+
 </html>
 

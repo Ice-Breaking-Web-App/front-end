@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
+    <title>ICE BREAKER</title>
+    <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
         body{
             display: flex;
@@ -14,23 +15,66 @@
         main{
             display: flex;
             flex-direction: column;
-            min-height: 80vh;
+            min-height: 90vh;
             background-color:#F4EBE0;
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em
         }
-        footer{
-            margin: auto;
-        }
+
         div { text-align: center;}
+
+        div.logo{
+          position:absolute;
+          left:50%;
+          right:50%;
+          top:90%;
+          transform: translate(-50%, -50%);
+          width:20%;
+          height:20%;
+        }
+
+        progress.progressbar{
+            position:absolute;
+            left:50%;
+            right:50%;
+            top:20%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+        }
+
+        div.question{
+            position:absolute;
+            left:50%;
+            right:50%;
+            top:30%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            text-align: left;
+        }
+
+        input.answer_wrap{
+          position:absolute;
+          display: flex;
+          left:50%;
+          right:50%;
+          top: 45%;
+          transform: translate(-50%,-50%);
+          width:80%;
+          height:30%;
+          align-self:center;
+          background-color:#F5FFFA;
+          border-radius: 5px;
+          border:none;
+        }
 
         button.previous{
           position:absolute;
           left: 25%;
           right: 75%;
+          top:75%;
+          transform: translate(-35%,-50%);
           width: 30%;
           height: 5%;
-          transform: translate(-35%,-50%);
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
@@ -41,60 +85,65 @@
           position:absolute;
           left: 75%;
           right: 25%;
+          top:75%;
+          transform: translate(-65%,-50%);
           width: 30%;
           height: 5%;
-          transform: translate(-65%,-50%);
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
         }
+
     </style>
 </head>
 <body>
     <section>
-        <header>
-            <a href="menu.html" target="">
-                <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-            <a href="home.html" target="">
-                <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+        <a href="../all/home.html" target="">
+            <img src = "\images\home.jpg" style ="float:right" alt = "홈">
+        </a>
         
-        </header>
+        <input type="checkbox" id ="menuicon">
+        <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
+
     </section>
+    <div style="padding:1%; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+    <main>
+        <div>
+            <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
+        </div>
+
+        <progress value="0.67" class="progressbar"></progress>
+
+        <div class="question">
+            <p style="font-family:Noto-Sans;">질문 2. MBTI는 무엇인가요?</p>
+            <p style="font-family:Noto-Sans;">답변</p>
+        </div>
+
+        <div>
+            <form action="answer3.html">
+                <input class="answer_wrap" type="text" id="answer2">
+                <button class="previous" type="button" onclick="location.href='answer.html'">이전으로</button>
+                <button class="next">다음으로</button>
+            </form>
+        </div>
+
+        <div class="logo">
+            <p><img src="..\..\images\logo.png" style = "width: 100%; height:100%;" alt="로고" border="0" align="center"></p>
+        </div>
+    </main>
+
 </body>
-<div style="padding:20px;"> </div>
-<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
-
-<main>
-    <div>
-        <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
-    </div>
-
-    <div style="padding:20px;"></div>
-
-    <div>
-        <progress value="0.67" style="width:90%;"></progress>
-        <p style="font-family:Noto-Sans; text-align:left;">질문 2. MBTI는 무엇인가요?</p>
-
-        <div style="padding:20px;"></div>
-
-        <p style="font-family:Noto-Sans; text-align:left;">답변</p>
-
-        <div style="padding:10px;"></div>
-        
-        <form action="answer3.html">
-            <input type="text" id="answer2">
-            <div style="padding:40px;"></div>
-            <button class="previous" type="button" onclick="location.href='answer.html'">이전으로</button>
-            <button class="next">다음으로</button>
-        </form>
-    </div>
-
-    <div style="padding:40px;"></div>
-
-    <div>
-        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-    </div>
-</main>
 </html>
 
