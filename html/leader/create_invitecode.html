@@ -15,7 +15,7 @@
       main{
           display: flex;
           flex-direction: column;
-          min-height: 90vh;
+          min-height: 80vh;
           background-color:#F4EBE0;
           border-bottom-left-radius: 1em;
           border-bottom-right-radius: 1em
@@ -24,45 +24,27 @@
       div { text-align: center;}
 
       div.text-wrap{
-          position:absolute;
           display: flex;
           left:50%;
           right:50%;
-          top: 45%;
-          transform: translate(-50%,-50%);
           width:70%;
-          height:5%;
+          height:50px;
           align-self:center;
           background-color:#F5FFFA;
           border-radius: 10px;
       }
 
-      div.announcement{
-        position:absolute;
-        left: 50%;
-        right:50%; top:35%;
-        transform:translate(-50%,-50%);
-        width: 70%;
-      }
-
       div.logo{
-          position:absolute;
+          display:inline-block;
           left:50%;
           right:50%;
-          top:90%;
-          transform: translate(-50%, -50%);
           width:20%;
           height:20%;
       }
-      
+
       button.move{
-          position:absolute;
-          left: 50%;
-          right: 50%;
-          top: 75%;
-          transform: translate(-50%,-50%);
           width: 80%;
-          height: 5%;
+          height:50px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
@@ -92,10 +74,12 @@
 
     </section>
 
-    <div style="padding:1%; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
-
+    <div style="padding:20px;"></div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
+    </div>
     <main>
-        <div class="announcement">
+        <div style="padding:140px;"></div>
+        <div>
             <p style="font-family:Noto Sans;">팀이 생성되었습니다!</p>
             <p style="font-family:Noto Sans;">00팀의 팀원들을 초대해 주세요.</p>
         </div>
@@ -107,13 +91,15 @@
             <button onClick="copyToClipBoard()">복사</button>
         </div>
 
-        <button class="move" type="button" onclick="location.href='manage_team.html'">
-            이동하기
-        </button>
+        <div style="padding:90px;"></div>
 
-        <div class="logo">
-            <p><img src="..\..\images\logo.png" style = "width: 100%; height:100%;" alt="로고" border="0" align="center"></p>
+        <div>
+            <button class="move" type="button" onclick="location.href='manage_team.html'">
+                이동하기
+            </button>
+            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
         </div>
+
     </main>
 </body>
 

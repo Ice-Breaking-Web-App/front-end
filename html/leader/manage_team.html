@@ -15,7 +15,7 @@
         main{
             display: flex;
             flex-direction: column;
-            min-height: 90vh;
+            min-height: 80vh;
             background-color:#F4EBE0;
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em
@@ -23,45 +23,31 @@
 
         div { text-align: center;}
 
-        div.announcement{
-            position:absolute;
-            left: 50%;
-            right:50%; top:35%;
-            transform:translate(-50%,-50%);
-            width: 70%;
-        }
-
         div.text-wrap{
-          position:absolute;
           display: flex;
           left:50%;
           right:50%;
-          top: 45%;
-          transform: translate(-50%,-50%);
           width:70%;
-          height:5%;
+          height:50px;
           align-self:center;
           background-color:#F5FFFA;
           border-radius: 10px;
-        }
+      }
 
         div.logo{
-          position:absolute;
+          display:inline-block;
           left:50%;
           right:50%;
-          top:90%;
-          transform: translate(-50%, -50%);
           width:20%;
           height:20%;
         }
 
         button.left_selected{
-          position:absolute;
+          display:inline-block;
           left: 25%;
           right: 75%;
           width: 40%;
-          height: 5%;
-          transform: translate(-35%,-50%);
+          height: 50px;
           background-color:#B2C9C6;
           border-radius: 10px 0px 0px 10px;
           border:0;
@@ -69,12 +55,11 @@
         }
 
         button.right_not_selected{
-          position:absolute;
+          display:inline-block;
           left: 75%;
           right: 25%;
           width: 40%;
-          height: 5%;
-          transform: translate(-65%,-50%);
+          height: 50px;
           background-color:#FFFFFF;
           border-radius: 0px 10px 10px 0px;
           border:0;
@@ -87,13 +72,11 @@
         }
 
         ol.memberlist{
-            position:absolute;
+            display:inline-block;
             left:50%;
             right:50%;
-            top:50%;
-            transform: translate(-50%,-50%);
             width: 70%;
-            height: 40%;
+            height: 400px;
             text-align:center;
             overflow:auto;
         }
@@ -114,7 +97,7 @@
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" style ="float:right" alt = "홈">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -132,23 +115,27 @@
         </div>
 
     </section>
-    <div style="padding:1%; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+    <div style="padding:20px;"></div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
     <main>
         <div>
             <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
         </div>
-        
+
+        <div style="padding:10px;"></div>
+
         <div>
-            <button class="left_selected" type="button" onclick="window.location.reload()">
+            <button class="left_selected" type="button" onclick="location.href='manage_team.html'">
                 팀원 현황
             </button>
-            <button class="right_not_selected" type="button" onclick="location.href='manage_write.html'">
+            <button class="right_not_selected" type="button" onclick="window.location.reload()">
                 답변 작성
             </button>
         </div>
 
+        <div style="padding:10px;"></div>
 
-        <div class="announcement" style="top:25%;">
+        <div>
             <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
             <p style="font-family:Noto Sans;">점수 확인이 가능합니다.</p>
 
@@ -164,18 +151,17 @@
             </ol>
         </div>
 
-        <div class="text-wrap" style="top: 75%;">
+        <div class="text-wrap">
             <div style="position:relative; top:25%; flex-grow:1;"id = "invite_code" style="display:inline;">
                 XD5S28H
             </div>
             <button onClick="copyToClipBoard()">복사</button>
         </div>
 
-        <div class="logo">
-            <p><img src="..\..\images\logo.png" style = "width: 100%; height:100%;" alt="로고" border="0" align="center"></p>
+        <div>
+            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
         </div>
     </main>
-
 </body>
 
 <script>
