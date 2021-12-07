@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
+    <title>ICE BREAKER</title>
+    <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
         body{
             display: flex;
@@ -14,15 +15,45 @@
         main{
             display: flex;
             flex-direction: column;
-            min-height: 80vh;
+            min-height: 90vh;
             background-color:#F4EBE0;
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em
         }
-        footer{
-            margin: auto;
-        }
+
         div { text-align: center;}
+
+        div.announcement{
+            position:absolute;
+            left: 50%;
+            right:50%; top:35%;
+            transform:translate(-50%,-50%);
+            width: 70%;
+        }
+
+        div.text-wrap{
+          position:absolute;
+          display: flex;
+          left:50%;
+          right:50%;
+          top: 45%;
+          transform: translate(-50%,-50%);
+          width:70%;
+          height:5%;
+          align-self:center;
+          background-color:#F5FFFA;
+          border-radius: 10px;
+        }
+
+        div.logo{
+          position:absolute;
+          left:50%;
+          right:50%;
+          top:90%;
+          transform: translate(-50%, -50%);
+          width:20%;
+          height:20%;
+        }
 
         button.left_selected{
           position:absolute;
@@ -54,10 +85,27 @@
             counter-reset:item;
             list-style-type:none;
         }
-        li{
-            display: block;
+
+        ol.memberlist{
+            position:absolute;
+            left:50%;
+            right:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            width: 70%;
+            height: 40%;
+            text-align:center;
+            overflow:auto;
         }
-         li:before{
+
+        li.members{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            margin: 4%;
+            font-family:Noto Sans;
+        }
+         li.members:before{
             content:counter(item)" ";
             counter-increment:item;
         }
@@ -65,56 +113,82 @@
 </head>
 <body>
     <section>
-        <header>
-            <a href="menu.html" target="">
-                <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-            <a href="home.html" target="">
-                <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+        <a href="../all/home.html" target="">
+            <img src = "..\..\images\home.jpg" style ="float:right" alt = "홈">
+        </a>
         
-        </header>
+        <input type="checkbox" id ="menuicon">
+        <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
+
     </section>
-</body>
-<div style="padding:20px;"> </div>
-<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
-
-<main>
-    <div>
-        <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
-    </div>
-
-    <div style="padding:10px;"></div>
+    <div style="padding:1%; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
+    <main>
+        <div>
+            <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
+        </div>
         
-    <div>
-        <button class="left_selected" type="button" onclick="window.location.reload()">
-            팀원 현황
-        </button>
-        <button class="right_not_selected" type="button" onclick="location.href='manage_write.html'">
-            답변 작성
-        </button>
-    </div>
+        <div>
+            <button class="left_selected" type="button" onclick="window.location.reload()">
+                팀원 현황
+            </button>
+            <button class="right_not_selected" type="button" onclick="location.href='manage_write.html'">
+                답변 작성
+            </button>
+        </div>
 
-    <div style="padding:40px;"></div>
 
-    <div>
-        <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
-        <p style="font-family:Noto Sans;">점수 확인이 가능합니다.</p>
-        
-        <!--리스트 정렬 및 CSS 필요-->
+        <div class="announcement" style="top:25%;">
+            <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
+            <p style="font-family:Noto Sans;">점수 확인이 가능합니다.</p>
+
+        </div>
 
         <div style="overflow: auto">
-            <ol style="text-align:center; height: 355px; overflow:auto">
-                <li><img src = "\images\leadericon.png" style="width:5%; height:5%;" alt="팀장아이콘"><span>이름   </span>참여중</li>
-                <li><img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><span>이름   </span>참여중</li>
-                <li><img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><span>이름   </span>✔완료</li>
-                <li><img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><span>이름   </span></li>
-                <li><img src = "\images\membericon.png" style="width:5%; height:5%;" alt="팀원아이콘"><span>이름   </span></li>
+            <ol class="memberlist">
+                <li class="members"><img src = "..\..\images\leadericon.png" style="width:8%; height:8%;" alt="팀장아이콘"><span>이름</span>참여중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>참여중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>✔완료</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>대기중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>대기중</li>
             </ol>
         </div>
-    </div>
 
-    <div>
-        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-    </div>
-</main>
+        <div class="text-wrap" style="top: 75%;">
+            <div style="position:relative; top:25%; flex-grow:1;"id = "invite_code" style="display:inline;">
+                XD5S28H
+            </div>
+            <button onClick="copyToClipBoard()">복사</button>
+        </div>
+
+        <div class="logo">
+            <p><img src="..\..\images\logo.png" style = "width: 100%; height:100%;" alt="로고" border="0" align="center"></p>
+        </div>
+    </main>
+
+</body>
+
+<script>
+    function copyToClipBoard(){
+        const valOfDIV = document.getElementById("invite_code").innerText;
+        const textArea = document.createElement('textarea');z
+        document.body.appendChild(textArea);
+        textArea.value = valOfDIV;
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    }
+</script>
+
 </html>
 
