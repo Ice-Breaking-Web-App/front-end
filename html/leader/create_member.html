@@ -2,42 +2,76 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name = "viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>ICE BREAKER</title>
     <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
-        body{
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background:linear-gradient(#B2C9C6 8%, #F5FFFA 98%);
+      body{
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+      }
+
+      .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
+      }
+      main{
+          display: flex;
+          flex-direction: column;
+          min-height: 80vh;
+          background-color:#F4EBE0;
+          border-bottom-left-radius: 1em;
+          border-bottom-right-radius: 1em
         }
-        main{
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            background-color:#F4EBE0;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em
+        .back{
+            float:left;
+            margin-left: 40px;
+        }
+
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
         }
 
         div { text-align: center;}
 
-        div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-        }
-
         button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
+      }
+
+      .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
+
+        button.deletemember{
+            border:none;
+            float:right;
+            background:none;
+        }
+
+        input.membername{
+            background:none;
+            border: 1px solid #C4C4C4;
+            border-radius:10px;
+            height: 30px;
         }
 
         ol{
@@ -50,7 +84,7 @@
             left:50%;
             right:50%;
             width: 70%;
-            height: 400px;
+            height: 350px;
             text-align:center;
             overflow:auto;
         }
@@ -71,7 +105,7 @@
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -93,43 +127,41 @@
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
     <main>
+        <!--뒤로 가기-->
         <div>
             <a href="javascript:window.history.back()">
                 <img src = "..\..\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
         </div>
 
-        <div style="padding:40px;"></div>
         
         <div>
-            <p>00팀의 팀원들을 알려주세요</p>
-            <p style="color:gray;">* 팀 생성 후에는 수정할 수 없습니다.</p>
+            <p class="explain">00팀의 팀원들을 알려주세요</p>
+            <p class="explain" style="color:gray;">* 팀 생성 후에는 수정할 수 없습니다.</p>
         </div>
-
-        <div style="padding:20px;"></div>
 
         <form method="post" action="manage_team.html">
             <div style="overflow:auto">
                 <ol class="memberlist" id = 'member_names'>
                     <li class="members">
-                        <img src = "..\..\images\leadericon.png" style="width:8%; height:8%;" alt="팀장아이콘">팀장이름<p>&nbsp;</p>
+                        <img src = "..\..\images\leadericon.png" style="width:50px; height:50px;" alt="팀장아이콘"><span>팀장이름</span>&nbsp;</p>
                     </li>
                     <li class="members">
-                        <img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
+                        <img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span><input class="membername" type="text" id="member_name" placeholder="이름"></span><button class="deletemember" type="button" onclick="deleteList(this);">X</button>
                     </li>
                     <li class="members">
-                        <img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><input type="text" id="member_name" placeholder="이름"><button type="button" onclick="deleteList(this);">X</button>
+                        <img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span><input class="membername" type="text" id="member_name" placeholder="이름"></span><button class="deletemember" type="button" onclick="deleteList(this);">X</button>
                     </li>
                 </ol>
             </div>
+
             <div>
-                <img src="..\..\images\more.jpg"  onclick='addList()' alt="추가" border="0" align="center">
-                <div style="padding:20px;"></div>
+                <p><img src="..\..\images\more.jpg"  onclick='addList()' alt="추가" border="0" align="center"></p>
                 <button class="move">완료하기</button>
             </div>
         </form>
 
         <div>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
     </main>
 </body>
@@ -142,9 +174,9 @@
         const addValue2 = document.createElement("addValue2");
         const addValue3 = document.createElement("addValue3");
 
-        addValue.innerHTML = "<img src='../../images/membericon.png' style='width:8%; height:8%;' alt='팀원아이콘'>";
-        addValue2.innerHTML = "<input type='text' id='member_name' placeholder='이름'>";
-        addValue3.innerHTML = "<button type='button' onclick='deleteList2(this);'>X</button>";
+        addValue.innerHTML = "<img src='../../images/membericon.png' style='width:50px; height:50px;' alt='팀원아이콘'>";
+        addValue2.innerHTML = "<span><input class='membername' type='text' id='member_name' placeholder='이름'></span>";
+        addValue3.innerHTML = "<button class='deletemember' type='button' onclick='deleteList2(this);'>X</button>";
 
         const li = document.createElement("li");
 

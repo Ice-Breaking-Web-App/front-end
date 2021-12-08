@@ -12,6 +12,14 @@
             min-height: 100vh;
             background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
         }
+        .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
+      }
         main{
             display: flex;
             flex-direction: column;
@@ -20,28 +28,25 @@
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em
         }
-
+        
         div { text-align: center;}
 
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
+
         div.text-wrap{
+          position:relative;
+          top: 10px;
           display: flex;
-          left:50%;
-          right:50%;
           width:70%;
           height:50px;
           align-self:center;
           background-color:#F5FFFA;
           border-radius: 10px;
       }
-
-        div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-        }
-
         button.left_selected{
           display:inline-block;
           left: 25%;
@@ -75,8 +80,8 @@
             display:inline-block;
             left:50%;
             right:50%;
-            width: 70%;
-            height: 400px;
+            width: 80%;
+            height: 350px;
             text-align:center;
             overflow:auto;
         }
@@ -92,12 +97,19 @@
             content:counter(item)" ";
             counter-increment:item;
         }
+
+        .explain {
+            position: relative;
+            top: 30px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
       </style>
 </head>
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "..\..\images\home.png" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -122,32 +134,27 @@
             <h1 style="font-family:Noto Sans; text-align:left;">00팀</h1>
         </div>
 
-        <div style="padding:10px;"></div>
-
         <div>
-            <button class="left_selected" type="button" onclick="location.href='manage_team.html'">
+            <button class="left_selected" type="button" onclick="window.location.reload()">
                 팀원 현황
             </button>
-            <button class="right_not_selected" type="button" onclick="window.location.reload()">
+            <button class="right_not_selected" type="button" onclick="location.href='manage_write.html'">
                 답변 작성
             </button>
         </div>
 
-        <div style="padding:10px;"></div>
-
         <div>
-            <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
-            <p style="font-family:Noto Sans;">점수 확인이 가능합니다.</p>
-
+            <p class="explain">모든 팀원이 답변을 작성해야</p>
+            <p class="explain">점수 확인이 가능합니다.</p>
         </div>
 
         <div style="overflow: auto">
             <ol class="memberlist">
-                <li class="members"><img src = "..\..\images\leadericon.png" style="width:8%; height:8%;" alt="팀장아이콘"><span>이름</span>참여중</li>
-                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>참여중</li>
-                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>✔완료</li>
-                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>대기중</li>
-                <li class="members"><img src = "..\..\images\membericon.png" style="width:8%; height:8%;" alt="팀원아이콘"><span>이름</span>대기중</li>
+                <li class="members"><img src = "..\..\images\leadericon.png" style="width:50px; height:50px;" alt="팀장아이콘"><span>이름</span>참여중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span>이름</span>참여중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span>이름</span>✔완료</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span>이름</span>대기중</li>
+                <li class="members"><img src = "..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span>이름</span>대기중</li>
             </ol>
         </div>
 
@@ -158,8 +165,9 @@
             <button onClick="copyToClipBoard()">복사</button>
         </div>
 
+        <!--로고-->
         <div>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
     </main>
 </body>

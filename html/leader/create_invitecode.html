@@ -12,21 +12,39 @@
           min-height: 100vh;
           background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
       }
-      main{
-          display: flex;
-          flex-direction: column;
-          min-height: 80vh;
-          background-color:#F4EBE0;
-          border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em
+      .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
       }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            background-color:#F4EBE0;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em
+        }
 
-      div { text-align: center;}
+        .explain {
+            position: relative;
+            top: 50px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
+        .icon {
+         width: 30px;
+        }
+        
+        div { text-align: center;}
 
       div.text-wrap{
+          position:relative;
+          top: 50px;
           display: flex;
-          left:50%;
-          right:50%;
           width:70%;
           height:50px;
           align-self:center;
@@ -34,28 +52,28 @@
           border-radius: 10px;
       }
 
-      div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-      }
-
-      button.move{
+        button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
-      }
+        }
+
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
       </style>
 </head>
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.jpg" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -77,11 +95,12 @@
     <div style="padding:20px;"></div>
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
+
     <main>
-        <div style="padding:140px;"></div>
+        <!--텍스트-->
         <div>
-            <p style="font-family:Noto Sans;">팀이 생성되었습니다!</p>
-            <p style="font-family:Noto Sans;">00팀의 팀원들을 초대해 주세요.</p>
+            <p class="explain">팀이 생성되었습니다!</p>
+            <p class="explain">00팀의 팀원들을 초대해 주세요.</p>
         </div>
 
         <div class="text-wrap">
@@ -91,16 +110,15 @@
             <button onClick="copyToClipBoard()">복사</button>
         </div>
 
-        <div style="padding:90px;"></div>
+       <!--이동하기 버튼 및 로고-->
+       <div>
+        <button class="move" type="button" onclick="location.href='manage_team.html'">
+            이동하기
+        </button>
+        <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
+    </div>
 
-        <div>
-            <button class="move" type="button" onclick="location.href='manage_team.html'">
-                이동하기
-            </button>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-        </div>
-
-    </main>
+</main>
 </body>
 
 

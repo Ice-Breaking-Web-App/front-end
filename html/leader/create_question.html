@@ -12,6 +12,14 @@
             min-height: 100vh;
             background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
         }
+        .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
+        }
         main{
             display: flex;
             flex-direction: column;
@@ -24,33 +32,38 @@
         div { text-align: center;}
 
         input.text-wrap{
-          text-align:center;
+          position:relative;
+          text-align:left;
           display: inline-block;
-          left:50%;
-          right:50%;
           width:70%;
           height:50px;
-          align-self:center;
           background-color:#F5FFFA;
           border-radius: 10px;
           border:none;
         }
 
-        div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
+        .explain {
+            position: relative;
+            top: 10px;
+            font-family: Noto Sans;
+            font-size: 10px;
         }
 
         button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
+        }
+
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
         }
 
         button.deletequestion{
@@ -70,20 +83,22 @@
             left:50%;
             right:50%;
             width: 90%;
-            height: 400px;
+            height: 350px;
             text-align:center;
             overflow:auto;
         }
         li.questions{
             display: block;
             align-items:center;
-            margin: 4%;
             font-family:Noto Sans;
+            margin: 4%;
         }
         li.questions:before{
             float:left;
             content:"질문 "counter(item)".";
             counter-increment:item;
+            font-family: Noto Sans;
+            font-size: 10px;
         }
     </style>
       
@@ -92,7 +107,7 @@
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.png" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -114,46 +129,42 @@
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
     <main>
-        <div style="padding:20px;"></div>
-        <div>
-            <p style="font-family:Noto Sans;">00팀이 서로 친해질 수 있도록</p>
-            <p style="font-family:Noto Sans;">질문을 작성해 주세요 :)</p>
-        </div>
 
-        <div style="padding:20px;"></div>
+        <div>
+            <p class="explain">00팀이 서로 친해질 수 있도록</p>
+            <p class="explain">질문을 작성해 주세요 :)</p>
+        </div>
 
         <div>
             <form method="post" action="create_member.html">
                 <div style="overflow:auto">
                     <ol class="questionlist" id = 'questions'>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:100%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                             <!--추천 질문으로 채워 넣기, 추천 질문 새로고침 구현 필요-->
-                            <br>
-                            <button type="button" onclick="autofill();">MBTI</button>
-                            <button type="button" onclick="autofill();">영화</button>
-                            <button type="button" onclick="autofill();">음식</button>
-                            <img src="..\..\images\refresh.jpg" onclick='refreshRecommendations()' alt="추천 새로고침">
+                            <div>
+                                <button type="button" onclick="autofill();">MBTI</button>
+                                <button type="button" onclick="autofill();">영화</button>
+                                <button type="button" onclick="autofill();">음식</button>
+                                <img src="..\..\images\refresh.jpg" onclick='refreshRecommendations()' alt="추천 새로고침">
+                            </div>
                         </li>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:100%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                         </li>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:100%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                         </li>
                     </ol>
                 </div>
-                <div style="padding:10px;"></div>
-                <img src="..\..\images\more.jpg" onclick='addList()' alt="추가">
-                <div style="padding:20px;"></div>
+                <p><img src="..\..\images\more.jpg" onclick='addList()' alt="추가"></p>
                 <button class="move">다음으로</button>
             </form>
         </div>
 
-        <div style="padding:40px;"></div>
-
+        <!--로고-->
         <div>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
     </main>
 </body>
@@ -163,7 +174,7 @@
 
         const addValue = document.createElement("addValue");
 
-        addValue.innerHTML = "<button class='deletequestion' type='button' onclick='deleteList2(this);''>X</button><br><input class='text-wrap' style='width:100%; text-align:left;' type='text' id='question' placeholder='질문 입력'>";
+        addValue.innerHTML = "<button class='deletequestion' type='button' onclick='deleteList2(this);''>X</button><br><input class='text-wrap' style='width:90%; text-align:left;' type='text' id='question' placeholder='질문 입력'>";
 
         const li = document.createElement("li");
 

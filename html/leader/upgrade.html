@@ -21,15 +21,30 @@
           border-bottom-right-radius: 1em
       }
 
-      div { text-align: center;}
+      .home {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            right: 35px;
+            float: right;
+        }
 
-      div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-      }
+      .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
+
+    .mainlogo {
+            width: 50%;
+            height: 50%;
+            position: relative;
+            top: 60px;
+    }
+
+      div { text-align: center;}
 
       div.upgradelist{
           display:inline-block;
@@ -39,19 +54,27 @@
       }
 
       button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
       }
+
+      .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
       </style>
 </head>
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.png" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -70,36 +93,39 @@
 
     </section>
 
-    <div style="padding:20px"></div>
+    <div style="padding:20px;"></div>
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
+
     <main>
         <div>
             <a href="javascript:window.history.back()">
                 <img src = "..\..\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
         </div>
-        <div style="padding:70px;"></div>
 
         <div>
-            <p style="font-family:Noto Sans;"><img src="..\..\images\icon_all\home\ICE BREAKER.png" alt="ICE_BREAKER_LOGO" border="0"></p>
-            <p style = "padding:10px;"> </p>
-            <p style="font-family:Noto Sans;">추가로 이용하고 싶은 기능이 있으신가요?</p>
-            <p style="font-family:Noto Sans;">Premium으로 업그레이드해서 모든 기능을 이용하세요!</p>
-            <p style = "padding:10px;"> </p>
+            <img src="..\..\images\icon_all\home\ICE BREAKER.png" alt="프로젝트" class="mainlogo">
+        </div>
+        
+        <div style="padding:20px;"></div>
+
+        <div>
+            <p class="explain">추가로 이용하고 싶은 기능이 있으신가요?</p>
+            <p class="explain">Premium으로 업그레이드해서 모든 기능을 이용하세요!</p>
         </div>
 
         <div class="upgradelist">
-            <p style="font-family:Noto Sans;"><img src="..\..\images\pay_check.jpg" alt="check" border="0">  질문 최대 10개까지 작성 가능</p>
-            <p style="font-family:Noto Sans;"><img src="..\..\images\pay_check.jpg" alt="check" border="0">  팀장 포함 인원 최대 8명 작성 가능</p>
+            <p class="explain"><img src="..\..\images\pay_check.jpg" alt="check" border="0">  질문 최대 10개까지 작성 가능</p>
+            <p class="explain"><img src="..\..\images\pay_check.jpg" alt="check" border="0">  팀장 포함 인원 최대 8명 작성 가능</p>
         </div>
 
-        <div style="padding:90px"></div>
         
+        <!--결제 버튼 및 로고-->
         <div>
             <button class="move" type="button" onclick="location.href='create_question.html'">
                 결제하기
             </button>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
 
     </main>

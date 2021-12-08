@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name = "viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>ICE BREAKER</title>
     <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
@@ -12,6 +13,15 @@
           min-height: 100vh;
           background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
       }
+
+      .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
+      }
       main{
           display: flex;
           flex-direction: column;
@@ -19,32 +29,47 @@
           background-color:#F4EBE0;
           border-bottom-left-radius: 1em;
           border-bottom-right-radius: 1em
-      }
+        }
+        .back{
+            float:left;
+            margin-left: 40px;
+        }
+
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
+
+        .icon {
+         width: 30px;
+        }
 
       div { text-align: center;}
 
-      div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-      }
-
       button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
       }
+
+      .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
       </style>
 </head>
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.png" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -63,36 +88,38 @@
 
     </section>
 
-    <div style="padding:20px"></div>
+    <div style="padding:20px;"></div>
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
+
     <main>
+        <!--뒤로 가기-->
         <div>
             <a href="javascript:window.history.back()">
-                <img src = "..\..\images\arrow_back_ios.png" style = "float:left" alt = "뒤로가기"></a>
+                <img src="..\..\images\arrow_back_ios.png" alt="뒤로가기" class ="back"></a>
         </div>
 
+        <!--안내 아이콘-->
+        <div style="padding:20px;"></div>
+        <div id="icon">
+            <img src="..\..\images\pay.jpg" alt="안내아이콘" class="icon">
+        </div>
 
-        <div style="padding:90px;"></div>
-
+        <!--텍스트-->
         <div>
-            <p><img src="..\..\images\pay.jpg" style="width:10%; height:10%;" alt="안내아이콘" border="0"></p>
-            <p style="font-family:Noto Sans;">[안내]</p>
-            <p style = "padding:10px;"> </p>
-            <p style="font-family:Noto Sans;">선택하신 기능은 업그레이드 이후</p>
-            <p style="font-family:Noto Sans;">사용가능한 기능입니다.</p>
-            <p style = "padding:10px;"> </p>
-            <p style="font-family:Noto Sans;">확인 버튼을 누르시면 업그레이드를 위한</p>
-            <p style="font-family:Noto Sans;">결제 화면으로 넘어갑니다.</p>
+            <p class="explain">[안내]</p>
+            <p class="explain">선택하신 기능은 업그레이드 이후</p>
+            <p class="explain">사용 가능한 기능입니다.</p>
+            <p class="explain">확인 버튼을 누르시면 업그레이드를 위한</p>
+            <p class="explain">결제 화면으로 넘어갑니다.</p>
         </div>
         
-        <div style="padding:70px"></div>
-        
+        <!--확인 버튼 및 로고-->
         <div>
-            <button class="move" type="button" onclick="location.href='upgarde.html'">
+            <button class="move" type="button" onclick="location.href='upgrade.html'">
                 확인
             </button>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
 
     </main>

@@ -13,6 +13,15 @@
           min-height: 100vh;
           background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
       }
+
+      .home {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          top: 25px;
+          right: 35px;
+          float: right;
+      }
       main{
           display: flex;
           flex-direction: column;
@@ -20,32 +29,43 @@
           background-color:#F4EBE0;
           border-bottom-left-radius: 1em;
           border-bottom-right-radius: 1em
-      }
+        }
+
+        .icon {
+         width: 30px;
+        }
+
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
 
       div { text-align: center;}
 
-      div.logo{
-          display:inline-block;
-          left:50%;
-          right:50%;
-          width:20%;
-          height:20%;
-      }
-
       button.move{
+          position:relative;
+          bottom:-100px;
           width: 80%;
-          height:50px;
+          height:70px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
       }
+
+      .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
       </style>
 </head>
 <body>
     <section>
         <a href="../all/home.html" target="">
-            <img src = "\images\home.png" style ="float:right" alt = "홈">
+            <img src = "..\..\images\home.png" alt = "홈" class="home">
         </a>
         
         <input type="checkbox" id ="menuicon">
@@ -69,22 +89,25 @@
     </div>
 
     <main>
-        <div style="padding:90px;"></div>
-        <div>
-            <p><img src="..\..\images\warning.png" style="width:10%; height:10%;" alt="안내아이콘" border="0"></p>
-            <p style="font-family:Noto Sans;">[안내]</p>
-            <p style = "padding:10px;"> </p>
-            <p style="font-family:Noto Sans;">더 이상 인원추가를 할 수 없습니다.</p>
-            <p style="font-family:Noto Sans;">(팀장 포함 최대 8명까지 가능)</p>
+        <!--안내 아이콘-->
+        <div style="padding:20px;"></div>
+        <div id="icon">
+            <img src="..\..\images\warning.png" alt="안내아이콘" class="icon">
         </div>
 
-        <div style="padding:90px"></div>
+        <!--텍스트-->
+        <div>
+            <p class="explain">[안내]</p>
+            <p class="explain">더 이상 인원추가를 할 수 없습니다.</p>
+            <p class="explain">(팀장 포함 최대 8명까지 가능)</p>
+        </div>
         
+        <!--이전으로 버튼 및 로고-->
         <div>
             <button class="move" type="button" onclick="location.href='create_member.html'">
                 이전으로
             </button>
-            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+            <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
 
     </main>
