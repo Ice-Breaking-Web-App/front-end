@@ -14,9 +14,20 @@
             flex-direction: column;
             min-height: 100vh;
             background: linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+            text-align: center;
+        }
+
+        .home {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            right: 35px;
+            float: right;
         }
 
         main {
+            position: relative;
             display: flex;
             flex-direction: column;
             min-height: 80vh;
@@ -25,18 +36,45 @@
             border-bottom-right-radius: 1em
         }
 
-        div {
-            text-align: center;
+        .teamname {
+            font-family: Noto Sans;
+            font-size: 20px;
+            font-weight: bold;
         }
+
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
+
+        .icon {
+            width: 30px;
+        }
+
+        .button {
+            position: relative;
+            width: 180px;
+            bottom: -100px;
+        }
+
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
+        
     </style>
 </head>
 
 <body>
+    <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.jpg" style="float:right" alt="홈">
+            <img src="\images\home.png" alt="홈" class="home">
         </a>
-
+        
         <input type="checkbox" id="menuicon">
         <label for="menuicon">
             <span></span>
@@ -56,25 +94,27 @@
     <div style="padding:20px;"> </div>
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
     </div>
+
     <main>
-        <div style="padding:70px;"> </div>
-        <div>
-            <p><img src="\images\answer_complete.png" style="width: 15%; height:15%;" alt="안내아이콘" border="0"
-                    align="center"></p>
-            <h1>
-                <p style="font-family:Noto Sans;">00팀</p>
-            </h1>
-            <p style="font-family:Noto Sans;">작성이 모두 완료되었습니다.</p>
+        <!-- 아이콘 -->
+        <div style="padding:20px;"> </div>
+        <div id="icon">
+            <img src="\images\answer_complete.png" alt="안내아이콘" class="icon">
         </div>
-        <div style="padding:90px;"> </div>
+
+        <p class="teamname">00팀</p>
+        <p class="explain">다른 팀원들의 답변을 맞추러 가볼까요?</p>
+
         <!-- 결과확인버튼 -->
         <div>
             <a href="answer_all.html" target="">
-                <img src="\images\icon_all\button\checkresult.png" style="width: 30%; height:30%;" alt="결과확인" border="0"
-                    align="center"></a>
-            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+                <img src="\images\icon_all\button\checkresult.png" alt="결과확인" class="button"></a>
         </div>
 
+        <!--하단 로고-->
+        <footer>
+            <img src="\images\logo.png" alt="로고" class="logo1">
+        </footer>
     </main>
 </body>
 

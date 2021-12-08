@@ -14,6 +14,16 @@
             flex-direction: column;
             min-height: 100vh;
             background: #F4EBE0;
+            text-align: center;
+        }
+
+        .home {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            right: 35px;
+            float: right;
         }
 
         main {
@@ -21,27 +31,57 @@
             flex-direction: column;
             min-height: 80vh;
         }
+        .back{
+            float:left;
+            margin-left: 40px;
+        }
+        .teamname {
+            font-family: Noto Sans;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+        }
 
-        div {
-            text-align: center;
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
+        }
+
+        .icon {
+            width: 30px;
         }
 
         .blue {
-            padding: 50px;
+            padding: 20px;
             background-color: #B2C9C6;
-            margin-left: 100px;
-            margin-right: 100px;
+            margin-left: 60px;
+            margin-right: 60px;
             border-top-left-radius: 1em;
             border-top-right-radius: 1em;
         }
 
         .white {
-            padding: 150px;
+            padding: 30px;
             background-color: #FFFFFF;
-            margin-left: 100px;
-            margin-right: 100px;
+            margin-left: 60px;
+            margin-right: 60px;
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em;
+        }
+
+        .button {
+            position: relative;
+            width: 180px;
+            bottom: -100px;
+            word-break: break-all;
+        }
+
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
         }
 
         ul {
@@ -50,8 +90,9 @@
         }
 
         #square {
+            position: relative;
             box-sizing: border-box;
-            width: 550px;
+            width: 400px;
             height: 100px;
             margin: 0 auto;
             background-color: #ad8b7dbe;
@@ -68,7 +109,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.jpg" style="float:right" alt="홈">
+            <img src="\images\home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -87,49 +128,49 @@
 
     </section>
 
-    <div style="padding:50px;"> </div>
     <!-- 뒤로 가기와 팀 이름 -->
-    <h1>
-        <p style="font-family:Noto Sans; font-size: 50px; float:left; margin-left: 40px;">00팀</p>
-        <div style="padding:90px;"> </div>
+    <p class="teamname">00팀</p>
+
+    <div>
         <a href="javascript:window.history.back()">
-            <img src="\images\arrow_back_ios.png" style="float:left; margin-left: 40px;" alt="뒤로가기"></a>
-    </h1>
+            <img src="\images\arrow_back_ios.png" alt="뒤로가기" class = "back"></a>
+    </div>
 
     <main>
         <div class="blue">
-            <p style="font-family:Noto Sans; font-size: 30px; float:left;">Q1. 질문 1번 </p>
+            <p class="explain">Q1. 질문 1번</p>
         </div>
 
         <div class="white">
             <ul>
                 <li>
                     <div id="square">
-                        <img src="\images\boardicon.png" style="height:60%; float: left; margin-left: 20px;">
-                        <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
+                        <img src="\images\boardicon.png" class="icon">
+                        <p class="explain">답변</p>
                     </div>
-                    <div style="padding:20px;"></div>
+
+                    <div style="padding:10px;"> </div>
 
                     <div id="square">
-                        <img src="\images\boardicon.png" style="height:60%; float: left; margin-left: 20px;">
-                        <p style="font-family:Noto Sans; color: black; font-size: 30px; display: inline-block;">답변</p>
+                        <img src="\images\boardicon.png" class="icon">
+                        <p class="explain">답변</p>
                     </div>
-                    <div style="padding:20px;"></div>
+                    
 
                 </li>
             </ul>
         </div>
 
-        <div style="padding:30px;"> </div>
-
+        <!-- 선택 버튼 -->
         <div>
-            <!-- 선택 버튼 -->
             <a href="game_resultboard.html" target="">
-                <img src="\images\icon_all\button\next.png" style="width: 30%; height:30%;" alt="결과확인" border="0"
-                    align="center"></a>
-            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+                <img src="\images\icon_all\button\next.png" alt="선택" class="button"></a>
         </div>
 
+        <!--하단 로고-->
+        <footer>
+            <img src="\images\logo.png" alt="로고" class="logo1">
+        </footer>
     </main>
 </body>
 

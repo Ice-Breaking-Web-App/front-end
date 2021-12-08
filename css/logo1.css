@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-img[src $= "..\images\logo.png"]{
-    text-align: center;
-    width: 20%;
-	height: 20%;
-}

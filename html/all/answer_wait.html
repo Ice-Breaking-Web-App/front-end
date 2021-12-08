@@ -14,9 +14,20 @@
             flex-direction: column;
             min-height: 100vh;
             background: linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
+            text-align: center;
+        }
+
+        .home {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            right: 35px;
+            float: right;
         }
 
         main {
+            position: relative;
             display: flex;
             flex-direction: column;
             min-height: 80vh;
@@ -25,9 +36,29 @@
             border-bottom-right-radius: 1em
         }
 
-        div {
-            text-align: center;
+        .explain {
+            position: relative;
+            top: 5px;
+            font-family: Noto Sans;
+            font-size: 10px;
         }
+
+        .icon {
+            width: 30px;
+        }
+
+        .button {
+            position: relative;
+            width: 180px;
+            bottom: -100px;
+        }
+
+        .logo1 {
+            width: 80px;
+            position: relative;
+            bottom: -120px;
+        }
+        
     </style>
 </head>
 
@@ -35,7 +66,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.jpg" style="float:right" alt="홈">
+            <img src="\images\home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -58,23 +89,32 @@
     </div>
 
     <main>
-        <div style="padding:70px;"> </div>
-        <div>
-            <p><img src="\images\warning.png" style="width: 10%; height:10%;" alt="안내아이콘" border="0" align="center"></p>
-            <p style="font-family:Noto Sans;">[ 안내 ]</p>
-            <p style="padding:10px;"> </p>
-            <p style="font-family:Noto Sans;">아직 답변을 작성하지 않은 팀원이 있어요!</p>
-            <p style="font-family:Noto Sans;">모든 팀원이 답변을 작성해야</p>
-            <p style="font-family:Noto Sans;">게임으로 이동할 수 있습니다.</p>
-        </div>
+        <!-- 안내 아이콘 -->
         <div style="padding:20px;"> </div>
-        <div>
-            <a onClick="window.location.reload()" style="cursor: pointer;">
-                <img src="\images\answer_refresh.png" alt="새로고침" border="0" align="center"></a>
-            </a>
-            <div style="padding:50px;"> </div>
-            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+        <div id="icon">
+            <img src="\images\warning.png" alt="안내아이콘" class="icon">
         </div>
+
+        <!-- 텍스트 -->
+        <div>
+            <p class="explain">[ 안내 ]</p>
+            <p class="explain">아직 답변을 작성하지 않은 팀원이 있어요!</p>
+            <p class="explain">모든 팀원이 답변을 작성해야</p>
+            <p class="explain">게임으로 이동할 수 있습니다.</p>
+        </div>
+
+        <!--새로고침 아이콘-->
+        
+        <div id=icon>
+            <a onClick="window.location.reload()" style="cursor: pointer;">
+                <img src="\images\answer_refresh.png" alt="새로고침" class="icon"></a>
+        </div>
+
+        <!--하단 로고-->
+        <footer>
+            <img src="\images\logo.png" alt="로고" class="logo1">
+        </footer>
+
     </main>
 </body>
 
