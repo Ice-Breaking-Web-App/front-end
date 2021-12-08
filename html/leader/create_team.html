@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS</title>
+    <title>ICE BREAKER</title>
+    <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <style> 
         body{
             display: flex;
@@ -19,93 +20,148 @@
             border-bottom-left-radius: 1em;
             border-bottom-right-radius: 1em
         }
-        footer{
-            margin: auto;
-        }
+
         div { text-align: center;}
 
+        input.text-wrap{
+          text-align:center;
+          display: inline-block;
+          left:50%;
+          right:50%;
+          width:70%;
+          height:50px;
+          align-self:center;
+          background-color:#F5FFFA;
+          border-radius: 10px;
+          border:none;
+        }
+
+        div.logo{
+          display:inline-block;
+          left:50%;
+          right:50%;
+          width:20%;
+          height:20%;
+        }
+
+        div.qlist{
+          display:inline-block;
+          width:80%;
+          text-align:left;
+          align-self:center;
+        }
+
+        div.colors{
+          display:inline-flex;
+          width:70%;
+          text-align:center;
+          align-self:center;
+          justify-content: space-between;
+        }
+
         button.move{
-          position:absolute;
-          left: 50%;
-          right: 50%;
           width: 80%;
-          height: 5%;
-          transform: translate(-50%,-50%);
+          height:50px;
           background-color:#F5FFFA;
           border-radius: 30px;
           border:0;
           outline:0;
         }
 
+        input[type="radio"]{
+            display:none;
+        }
+
+        input[type="radio"]+ label{
+            width:55px;
+            height:55px;
+            cursor:pointer;
+            background:none;
+        }
+
+        input[type="radio"]:checked + label{
+            border-radius:50%;
+            outline: 2px solid black;
+        }
+
+
     </style>
 </head>
 <body>
     <section>
-        <header>
-            <a href="menu.html" target="">
-                <img src = "\images\menu.jpg" style ="float:right" alt = "메뉴"></a>
-            <a href="home.html" target="">
-                <img src = "\images\home.jpg" style ="float:right" alt = "홈"></a>
+        <a href="../all/home.html" target="">
+            <img src = "\images\home.png" style ="float:right" alt = "홈">
+        </a>
         
-        </header>
+        <input type="checkbox" id ="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">최근 방문한 팀</a></li>
+                <li><a href="#">내가 팀장인 팀</a></li>
+                <li><a href="#">내가 팀원인 팀</a></li>
+            </ul>
+        </div>
+
     </section>
+    <div style="padding:20px;"></div>
+    <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em">
+    </div>
+    <main>
+        <div>
+            <h1 style="font-family:Noto Sans; text-align:left;">팀 만들기</h1>
+            <div><hr color="gray" width="97%" align="right"></div>
+        </div>
+        <div>
+            <form action='create_question.html';>
+                <div class="qlist">
+                    <p style="font-family:Noto Sans;">1. 팀 이름을 입력해 주세요.</p>
+                </div>
+                <input class="text-wrap" style="width:80%;" type = "text" id="team_name">
+
+                <div style="padding:30px;"></div>
+                
+                <div class="qlist">
+                <p style="font-family:Noto Sans;">2. 팀장님의 이름을 입력해 주세요.</p>
+                </div>
+                <input class="text-wrap" style="width:80%;" type = "text" id="leader_name">
+
+                <div style="padding:30px;"></div>
+
+                <div class="qlist">
+                    <p style="font-family:Noto Sans;">3. 팀의 대표색을 선택해 주세요.</p>
+                </div>
+
+                <div style="padding:20px;"></div>
+
+                <div class="colors">
+                    <input type = "radio" name="team_color" id="#E69C9C"><label for="#E69C9C"><img src="../../images/Ellipse 1.png"></label>
+                    <input type = "radio" name="team_color" id="#E5B79C"><label for="#E5B79C"><img src="../../images/Ellipse 2.png"></label>
+                    <input type = "radio" name="team_color" id="#E5D29C"><label for="#E5D29C"><img src="../../images/Ellipse 3.png"></label>
+                    <input type = "radio" name="team_color" id="#C1E59C"><label for="#C1E59C"><img src="../../images/Ellipse 4.png"></label>
+                </div>
+                <div style="padding:20px;"></div>
+                <div class="colors">
+                    <input type = "radio" name="team_color" id="#9CCAE5"><label for="#9CCAE5"><img src="../../images/Ellipse 5.png"></label>
+                    <input type = "radio" name="team_color" id="#9CAFE5"><label for="#9CAFE5"><img src="../../images/Ellipse 6.png"></label>
+                    <input type = "radio" name="team_color" id="#A49CE5"><label for="#A49CE5"><img src="../../images/Ellipse 7.png"></label>
+                    <input type = "radio" name="team_color" id="#D79CE5"><label for="#D79CE5"><img src="../../images/Ellipse 8.png"></label>
+                </div>
+
+                <div style="padding:30px;"></div>
+                <button class="move">입장하기</button>
+            </form>
+        </div>
+
+        <div>
+            <p><img src="..\..\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+        </div>
+    </main>
 </body>
-<div style="padding:20px;"> </div>
-<div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
-
-<main>
-    <div>
-        <h1 style="font-family:Noto Sans; text-align:left;">팀 만들기</h1>
-        <div><hr color="gray" width="97%" align="right"></div>
-    </div>
-
-    <div>
-        <form action='create_question.html';>
-            <!--임시 action-->
-            <ol style="text-align:left;">
-                <li><p style="font-family:Noto Sans;">팀 이름을 입력해 주세요.</p>
-                <div>
-                    <input type = "text" id="team_name">
-                </div>
-                </li>
-
-                <div style="padding:10px;"></div>
-
-                <li><p style="font-family:Noto Sans;">팀장님의 이름을 입력해 주세요.</p>
-                <div>
-                    <input type = "text" id="leader_name">
-                </div>
-                </li>
-
-                <div style="padding:10px;"></div>
-
-                <li><p style="font-family:Noto Sans;">팀의 대표색을 선택해 주세요.</p>
-                    <div>
-                        <!--원 구현 필요-->
-                        <input type = "radio" name="team_color" id="team_color" value="#E69C9C">
-                        <input type = "radio" name="team_color" id="team_color" value="#E5B79C">
-                        <input type = "radio" name="team_color" id="team_color" value="#E5D29C">
-                        <input type = "radio" name="team_color" id="team_color" value="#C1E59C">
-                        <br>
-                        <input type = "radio" name="team_color" id="team_color" value="#9CCAE5">
-                        <input type = "radio" name="team_color" id="team_color" value="#9CAFE5">
-                        <input type = "radio" name="team_color" id="team_color" value="#A49CE5">
-                        <input type = "radio" name="team_color" id="team_color" value="#D79CE5">
-                    </div>
-                </li>
-                <div style="padding:90px;"></div>
-                <div>
-                    <button class="move">입장하기</button>
-                </div>
-            </ol>
-        </form>
-    </div>
-
-    <div style="padding:40px;"></div>
-
-    <div>
-        <p><img src="\images\logo.png" style = "width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
-    </div>
-</main>
 </html>
+
 
