@@ -13,10 +13,3 @@ main {
     flex-direction: column;
     min-height: 80vh;
 }
-
-.mainlogo {
-    width: 50%;
-    height: 50%;
-    position: relative;
-    top: 60px;
-}

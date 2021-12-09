@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+input.q-wrap{
+    position:relative;
+    text-align:left;
+    display: inline-block;
+    width:70%;
+    height:50px;
+    background-color:#F5FFFA;
+    border-radius: 10px;
+    border:none;
+}
+
+button.deletequestion{
+    border:none;
+    float:right;
+    background:none;
+}
+
+button.deletemember{
+    border:none;
+    float:right;
+    background:none;
+}
+
+input.membername{
+    background:none;
+    border: 1px solid #C4C4C4;
+    border-radius:10px;
+    height: 30px;
+}
+
+div.qlist{
+    position:relative;
+    top:50px;
+    display:inline-block;
+    font-family: Noto Sans;
+    font-size: 10px;
+    width:80%;
+    text-align:left;
+    align-self:center;
+}
+
+div.colors{
+    display:inline-flex;
+    width:70%;
+    text-align:center;
+    align-self:center;
+    justify-content: space-between;
+}
+
+div.add{
+    position:relative;
+    top:50px;
+    left:50%;
+    right:50%;
+    transform:translate(-50%,-50%);
+    width:50px;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+input[type="radio"]+ label{
+    width:55px;
+    height:55px;
+    cursor:pointer;
+    background:none;
+}
+
+input[type="radio"]:checked + label{
+    border-radius:50%;
+    outline: 2px solid black;
+}
+
+ol{
+    counter-reset:item;
+    list-style-type:none;
+}
+
+ol.memberlist{
+    position:relative;
+    display:inline-block;
+    top:50px;
+    width: 70%;
+    height: 350px;
+    text-align:center;
+    overflow:auto;
+}
+
+ol.questionlist{
+    position:relative;
+    display:inline-block;
+    top:50px;
+    width: 90%;
+    height: 350px;
+    text-align:center;
+    overflow:auto;
+}
+
+li.questions{
+    display: block;
+    align-items:center;
+    font-family:Noto Sans;
+    margin: 4%;
+}
+
+li.questions:before{
+    float:left;
+    content:"질문 "counter(item)".";
+    counter-increment:item;
+    font-family: Noto Sans;
+    font-size: 10px;
+}
+
+li.members{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 4%;
+    font-family:Noto Sans;
+}
+ li.members:before{
+    content:counter(item)" ";
+    counter-increment:item;
+}
