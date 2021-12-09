@@ -7,85 +7,9 @@
         content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>memberteam</title>
     <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
-            text-align: center;
-        }
-
-        .home {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            top: 25px;
-            right: 35px;
-            float: right;
-        }
-
-        .teamname {
-            font-family: Noto Sans;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: right;
-            position: relative;
-            right: 30px;
-            top: 40px;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            background-color: #F4EBE0;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0px;
-        }
-
-        .line{
-            border: solid 1px #C4C4C4;
-            width: 95%;
-            margin-left: 40px;
-        }
-
-        #circle1 {
-            background-color: #E59C9C;
-            width: 50px;
-            height: 50px;
-            border-radius: 75px;
-            margin: 0 auto;
-            text-align: left;
-            line-height: 150px;
-            display: inline-block;
-        }
-
-        #square {
-            box-sizing: border-box;
-            width: 300px;
-            height: 50px;
-            margin: 0 auto;
-            background-color: #FFFFFF;
-            border-radius: 50px 50px 50px 50px;
-            filter: alpha(opacity=40);
-            opacity: 0.6;
-            -moz-opacity: 0.6;
-            display: inline-block;
-        }
-
-        .logo1 {
-            width: 80px;
-            position: relative;
-            bottom: -120px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/teamlist.css" />
 </head>
 
 <body>
@@ -103,9 +27,9 @@
         </label>
         <div class="sidebar">
             <ul>
-                <li><a href="#">최근 방문한 팀</a></li>
-                <li><a href="#">내가 팀장인 팀</a></li>
-                <li><a href="#">내가 팀원인 팀</a></li>
+                <li><a href="recentteam.html">최근 방문한 팀</a></li>
+                <li><a href="leaderteam.html">내가 팀장인 팀</a></li>
+                <li><a href="memberteam.html">내가 팀원인 팀</a></li>
             </ul>
         </div>
 
@@ -137,17 +61,17 @@
             <li>
                 <div id="circle1"></div>
                 <div id="square">
-                <p class ="explain">팀 이름</p></div>
+                <p>팀 이름</p></div>
                 <div style="padding:5px;"></div>
 
                 <div id="circle1"></div>
                 <div id="square">
-                <p class ="explain">팀 이름</p></div>
+                <p>팀 이름</p></div>
                 <div style="padding:5px;"></div>
 
                 <div id="circle1"></div>
                 <div id="square">
-                <p class ="explain">팀 이름</p></div>
+                <p>팀 이름</p></div>
 
             </li>
         </ul>

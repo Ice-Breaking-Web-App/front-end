@@ -7,76 +7,9 @@
         content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>game_answer</title>
     <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: #F4EBE0;
-            text-align: center;
-        }
-
-        .home {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            top: 25px;
-            right: 35px;
-            float: right;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-        }
-        .back{
-            float:left;
-            margin-left: 40px;
-        }
-        .teamname {
-            font-family: Noto Sans;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: left;
-        }
-
-        .explain {
-            position: relative;
-            top: 5px;
-            font-family: Noto Sans;
-            font-size: 10px;
-        }
-
-        .icon {
-            width: 30px;
-        }
-
-        .blue {
-            padding: 20px;
-            background-color: #B2C9C6;
-            margin-left: 60px;
-            margin-right: 60px;
-            border-top-left-radius: 1em;
-            border-top-right-radius: 1em;
-        }
-
-        .white {
-            padding: 30px;
-            background-color: #FFFFFF;
-            margin-left: 60px;
-            margin-right: 60px;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em;
-        }
-
-        .logo1 {
-            max-width: 20%;
-            max-height: 20%;
-            position: relative;
-            bottom: -100px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/board.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/beige.css" />
 </head>
 
 <body>
@@ -94,9 +27,9 @@
         </label>
         <div class="sidebar">
             <ul>
-                <li><a href="#">최근 방문한 팀</a></li>
-                <li><a href="#">내가 팀장인 팀</a></li>
-                <li><a href="#">내가 팀원인 팀</a></li>
+                <li><a href="recentteam.html">최근 방문한 팀</a></li>
+                <li><a href="leaderteam.html">내가 팀장인 팀</a></li>
+                <li><a href="memberteam.html">내가 팀원인 팀</a></li>
             </ul>
         </div>
 
@@ -113,14 +46,14 @@
 
     <main>
         <div class="blue">
-            <p class="explain">Q1. 질문 1번</p>
+            <p>Q1. 질문 1번</p>
         </div>
 
         <div class="white">
-            <p class="explain">답변</p>
+            <p>답변</p>
             <div style="padding:20px;"> </div>
             <img src="\images\membericon.png" class="icon">
-            <p class="explain">이름</p>
+            <p>이름</p>
         </div>
 
         <!--하단 로고-->

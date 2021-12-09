@@ -7,76 +7,9 @@
         content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>game_score</title>
     <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
-            text-align: center;
-        }
-
-        .home {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            top: 25px;
-            right: 35px;
-            float: right;
-        }
-
-        main {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            background-color: #F4EBE0;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0px;
-        }
-
-        .teamname {
-            font-family: Noto Sans;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .explain {
-            position: relative;
-            top: 5px;
-            font-family: Noto Sans;
-            font-size: 10px;
-        }
-
-        .icon {
-            width: 30px;
-        }
-
-        .button {
-            position: relative;
-            width: 180px;
-            bottom: -100px;
-        }
-
-        .logo1 {
-            width: 80px;
-            position: relative;
-            bottom: -120px;
-        }
-
-        #list {
-            font-family: Noto Sans;
-            font-size: 10px;
-            margin-left: 10px;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/memberlist.css" />
 </head>
 
 <body>
@@ -94,9 +27,9 @@
         </label>
         <div class="sidebar">
             <ul>
-                <li><a href="#">최근 방문한 팀</a></li>
-                <li><a href="#">내가 팀장인 팀</a></li>
-                <li><a href="#">내가 팀원인 팀</a></li>
+                <li><a href="recentteam.html">최근 방문한 팀</a></li>
+                <li><a href="leaderteam.html">내가 팀장인 팀</a></li>
+                <li><a href="memberteam.html">내가 팀원인 팀</a></li>
             </ul>
         </div>
 
@@ -112,17 +45,18 @@
         <p class="explain">팀원들이 맞춘 점수를 확인해봐요!</p>
 
         <!-- 결과 순위 -->
+        <div style="padding:20px;"> </div>
         <ul>
             <li>
                 <div id="list">1위</div>
-                <img src="\images\gamewinner.png" class = "icon">
+                <img src="\images\gamewinner.png" class="icon">
                 <div id="list">이름</div>
                 <div id="list">50</div>
                 <div id="list">/50</div>
                 <div style="padding:10px;"></div>
 
                 <div id="list">2위</div>
-                <img src="\images\membericon.png" class = "icon">
+                <img src="\images\membericon.png" class="icon">
                 <div id="list">이름</div>
                 <div id="list">48</div>
                 <div id="list">/50</div>
@@ -131,14 +65,15 @@
         </ul>
 
         <!-- 문제풀기 버튼 -->
-        <div style="padding:30px;"></div>
         <div>
             <a href="game_board.html" target="">
-                <img src="\images\icon_all\button\solve.png" style="width: 30%; height:30%;" alt="문제풀기" border="0"
-                    align="center"></a>
-            <p><img src="\images\logo.png" style="width: 20%; height:20%;" alt="로고" border="0" align="center"></p>
+                <img src="\images\icon_all\button\solve.png" alt="다음으로" class="button"></a>
         </div>
 
+        <!--하단 로고-->
+        <footer>
+            <img src="\images\logo.png" alt="로고" class="logo1">
+        </footer>
     </main>
 </body>
 

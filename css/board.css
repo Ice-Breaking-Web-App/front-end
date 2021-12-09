@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.blue {
+    padding: 20px;
+    background-color: #B2C9C6;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.white {
+    padding: 30px;
+    background-color: #FFFFFF;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#square {
+    position: relative;
+    box-sizing: border-box;
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #ad8b7dbe;
+    border-radius: 50px 50px 50px 50px;
+    filter: alpha(opacity=40);
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    display: inline-block;
+}

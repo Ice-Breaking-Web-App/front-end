@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.vector1 {
+    height: 2%;
+    position: fixed;
+    z-index: 2;
+    top: 33px;
+    right: 57px;
+}
+
+.vector2 {
+    height: 7%;
+    position: fixed;
+    z-index: 2;
+    top: 45px;
+    right: 20px;
+}
+
+.vector3 {
+    width: 15px;
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    right: -30px;
+}
+
+.vector4 {
+    width: 25px;
+    position: relative;
+    z-index: 2;
+    top: 40px;
+    right: -60px;
+}
+
+.txthome {
+    height: 7%;
+    position: fixed;
+    z-index: 3;
+    top: 22px;
+    right: 85px;
+}
+
+.txtmenu {
+    height: 10%;
+    position: fixed;
+    z-index: 3;
+    top: 70px;
+    right: 10px;
+}
+
+.txtleader {
+    width: 140px;
+    position: relative;
+    z-index: 3;
+    top: -70px;
+    right: 30px;
+}
+
+.txtmem {
+    width: 150px;
+    position: relative;
+    z-index: 3;
+    top: 10px;
+    right: -10px;
+}
+.txtscreen{
+    position: relative;
+    width: 200px;
+    z-index: 4;
+    top: -150px;
+}
+
+#base {
+    position: fixed;
+    z-index: 1;
+    width: 1500px;
+    height: 1000px;
+    background-color: #0000009d;
+    text-align: center;
+}
