@@ -46,30 +46,25 @@
     border-radius: 6px;
 }
 
-.button {
-    position: relative;
-    width: 180px;
-    bottom: -100px;
-    word-break: break-all;
-}
-
 button.move{
     position:relative;
     bottom:-100px;
-    width: 80%;
-    height:70px;
+    width: 180px;
+    height:35px;
     background-color:#F5FFFA;
     border-radius: 30px;
     border:0;
     outline:0;
+    font-family: Noto Sans;
+    font-size: 10px;
 }
 
 button.previous{
     position:relative;
     top:40px;
     float:left;
-    width: 30%;
-    height: 70px;
+    width: 130px;
+    height: 60px;
     background-color:#F5FFFA;
     border-radius: 30px;
     border:0;
@@ -80,8 +75,8 @@ button.next{
     position:relative;
     top:40px;
     float:right;
-    width: 30%;
-    height: 70px;
+    width: 130px;
+    height: 60px;
     background-color:#F5FFFA;
     border-radius: 30px;
     border:0;
