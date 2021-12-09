@@ -52,11 +52,11 @@
                                 onclick="deleteList(this);">X</button><br><input class="q-wrap"
                                 style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                             <!--추천 질문으로 채워 넣기, 추천 질문 새로고침 구현 필요-->
-                            <div>
-                                <button type="button" onclick="autofill();">MBTI</button>
-                                <button type="button" onclick="autofill();">영화</button>
-                                <button type="button" onclick="autofill();">음식</button>
-                                <img src="..\..\images\refresh.jpg" onclick='refreshRecommendations()' alt="추천 새로고침">
+                            <div class="recommendations_wrapper">
+                                <button class="recommendations" type="button" onclick="autofill();">MBTI</button>
+                                <button class="recommendations" type="button" onclick="autofill();">영화</button>
+                                <button class="recommendations" type="button" onclick="autofill();">음식</button>
+                                <img src="..\..\images\refresh.png" onclick='refreshRecommendations()' alt="추천 새로고침">
                             </div>
                         </li>
                         <li class="questions">
