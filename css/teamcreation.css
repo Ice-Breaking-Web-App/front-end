@@ -11,6 +11,16 @@ input.q-wrap{
     border:none;
 }
 
+.recommendations_wrapper{
+    position:relative;
+    top:10px;
+    display: inline-flex;
+    justify-content: space-between;
+    width:80%;
+    height:20px;
+    background:none;
+}
+
 button.deletequestion{
     border:none;
     float:right;
@@ -21,6 +31,14 @@ button.deletemember{
     border:none;
     float:right;
     background:none;
+}
+
+button.recommendations{
+    width: 20%;
+    height:20px;
+    border: 1px solid #B2C9C6;
+    background:none;
+    border-radius:20px;
 }
 
 input.membername{
