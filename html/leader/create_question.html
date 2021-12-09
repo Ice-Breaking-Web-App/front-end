@@ -5,104 +5,9 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>ICE BREAKER</title>
     <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
-    <style> 
-        body{
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
-        }
-        .home {
-          position: fixed;
-          width: 20px;
-          height: 20px;
-          top: 25px;
-          right: 35px;
-          float: right;
-        }
-        main{
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            background-color:#F4EBE0;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em
-        }
-
-        div { text-align: center;}
-
-        input.text-wrap{
-          position:relative;
-          text-align:left;
-          display: inline-block;
-          width:70%;
-          height:50px;
-          background-color:#F5FFFA;
-          border-radius: 10px;
-          border:none;
-        }
-
-        .explain {
-            position: relative;
-            top: 10px;
-            font-family: Noto Sans;
-            font-size: 10px;
-        }
-
-        button.move{
-          position:relative;
-          bottom:-100px;
-          width: 80%;
-          height:70px;
-          background-color:#F5FFFA;
-          border-radius: 30px;
-          border:0;
-          outline:0;
-        }
-
-        .logo1 {
-            width: 80px;
-            position: relative;
-            bottom: -120px;
-        }
-
-        button.deletequestion{
-            border:none;
-            float:right;
-            background:none;
-        }
-
-        ol{
-            counter-reset:item;
-            list-style-type:none;
-        }
-
-
-        ol.questionlist{
-            display:inline-block;
-            left:50%;
-            right:50%;
-            width: 90%;
-            height: 350px;
-            text-align:center;
-            overflow:auto;
-        }
-        li.questions{
-            display: block;
-            align-items:center;
-            font-family:Noto Sans;
-            margin: 4%;
-        }
-        li.questions:before{
-            float:left;
-            content:"질문 "counter(item)".";
-            counter-increment:item;
-            font-family: Noto Sans;
-            font-size: 10px;
-        }
-    </style>
-      
-      
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/teamcreation.css" />
 </head>
 <body>
     <section>
@@ -137,10 +42,10 @@
 
         <div>
             <form method="post" action="create_member.html">
-                <div style="overflow:auto">
+                <div>
                     <ol class="questionlist" id = 'questions'>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="q-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                             <!--추천 질문으로 채워 넣기, 추천 질문 새로고침 구현 필요-->
                             <div>
                                 <button type="button" onclick="autofill();">MBTI</button>
@@ -150,14 +55,16 @@
                             </div>
                         </li>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="q-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                         </li>
                         <li class="questions">
-                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="text-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <button class="deletequestion" type="button" onclick="deleteList(this);">X</button><br><input class="q-wrap" style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
                         </li>
                     </ol>
                 </div>
-                <p><img src="..\..\images\more.jpg" onclick='addList()' alt="추가"></p>
+                <div class="add">
+                    <p><img src="..\..\images\more.png" onclick='addList()' alt="추가"></p>
+                </div>
                 <button class="move">다음으로</button>
             </form>
         </div>
@@ -174,7 +81,7 @@
 
         const addValue = document.createElement("addValue");
 
-        addValue.innerHTML = "<button class='deletequestion' type='button' onclick='deleteList2(this);''>X</button><br><input class='text-wrap' style='width:90%; text-align:left;' type='text' id='question' placeholder='질문 입력'>";
+        addValue.innerHTML = "<button class='deletequestion' type='button' onclick='deleteList2(this);''>X</button><br><input class='q-wrap' style='width:90%; text-align:left;' type='text' id='question' placeholder='질문 입력'>";
 
         const li = document.createElement("li");
 

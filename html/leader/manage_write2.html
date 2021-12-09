@@ -5,125 +5,9 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>ICE BREAKER</title>
     <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
-    <style> 
-        body{
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background:linear-gradient(#B2C9C6 5%, #F5FFFA 95%);
-        }
-        .home {
-          position: fixed;
-          width: 20px;
-          height: 20px;
-          top: 25px;
-          right: 35px;
-          float: right;
-      }
-        main{
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            background-color:#F4EBE0;
-            border-bottom-left-radius: 1em;
-            border-bottom-right-radius: 1em
-        }
-        
-        div { text-align: center;}
-
-        progress.progressbar{
-            display:inline-block;
-            left:50%;
-            right:50%;
-            width: 80%;
-        }
-
-        div.question{
-            display:inline-block;
-            font-family: Noto Sans;
-            font-size: 10px;
-            width:80%;
-            text-align:left;
-            align-self:center;
-        }
-
-        div.answer{
-            display:inline-block;
-            font-family: Noto Sans;
-            font-size: 10px;
-            width:80%;
-            text-align:left;
-            align-self:center;
-        }
-
-        .logo1 {
-            width: 80px;
-            position: relative;
-            bottom: -120px;
-        }
-
-        input.answer_wrap{
-          position:relative;
-          top:10px;
-          text-align:left;
-          display: inline-block;
-          width:100%;
-          height:300px;
-          align-self:center;
-          background-color:#F5FFFA;
-          border-radius: 5px;
-          border:none;
-        }
-
-        button.left_not_selected{
-          display:inline-block;
-          left: 25%;
-          right: 75%;
-          width: 40%;
-          height: 50px;
-          background-color:#FFFFFF;
-          border-radius: 10px 0px 0px 10px;
-          border:0;
-          outline:0;
-        }
-
-        button.right_selected{
-          display:inline-block;
-          left: 75%;
-          right: 25%;
-          width: 40%;
-          height: 50px;
-          background-color:#B2C9C6;
-          border-radius: 0px 10px 10px 0px;
-          border:0;
-          outline:0;
-        }
-
-        button.previous{
-          position:relative;
-          top:40px;
-          float:left;
-          width: 30%;
-          height: 70px;
-          background-color:#F5FFFA;
-          border-radius: 30px;
-          border:0;
-          outline:0;
-        }
-
-        button.next{
-          position:relative;
-          top:40px;
-          float:right;
-          width: 30%;
-          height: 70px;
-          background-color:#F5FFFA;
-          border-radius: 30px;
-          border:0;
-          outline:0;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/manage.css" />
 </head>
 <body>
     <section>
@@ -162,8 +46,8 @@
             </button>
         </div>
 
-        <div>
-            <progress value="0.67" class="progressbar"></progress>
+        <div class="progressbar-container">
+            <div class="progressbar" style="width:67%;"></div>
         </div>
 
         <div class="question">
