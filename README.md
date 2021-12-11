@@ -17,7 +17,7 @@
 * Jupyter Notebook
 * Github
 
-# Features
+# Front-End Features
 
 * all(Jnayun)
    - 홈 화면, 홈 화면 가이드
@@ -46,3 +46,7 @@
       - 방 입장
       - 코드 오류
    - 답변 작성
+
+# Back-End Features
+
+* [Back-end Github](https://github.com/Ice-Breaking-Web-App/spring-boot-server)
