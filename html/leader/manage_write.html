@@ -13,7 +13,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -34,7 +34,7 @@
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
     <main>
         <div>
-            <h1 class = "teamname">00팀</h1>
+            <h1 class = "teamname" id="ex_t">00팀</h1>
         </div>
 
         <div>
@@ -46,19 +46,20 @@
             </button>
         </div>
 
-        <div class="progressbar-container">
+        <div class="progressbar-container" id="prog">
             <div class="progressbar" style="width:33%;"></div>
         </div>
 
         <div class="question">
-            <p>질문 1. MBTI는 무엇인가요?</p>
+            <span id="qno">1</span> <span id="qq">MBTI는 무엇인가요?</span>
         </div>
 
         <div class="answer">
             <p>답변</p>
             <form action="manage_write2.html">
-                <input class="answer_wrap" type="text" id="answer1">
-                <button class="next">다음으로</button>
+                <input class="answer_wrap" type="text" id="responseform">
+                <input type="button" id="manage_prev" onclick="preQ()" value="이전으로">
+                <input type="button" id="manage_next" onclick="nextQ()" value="다음으로">
             </form>
         </div>
 
@@ -68,4 +69,5 @@
         </div>
     </main>
 </body>
+<script src="managew.js"></script>
 </html>

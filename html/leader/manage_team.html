@@ -14,7 +14,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -35,7 +35,7 @@
     <div style="padding:10px; background-color: #F5FFFA; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em"> </div>
     <main>
         <div>
-            <h1 class ="teamname">00팀</h1>
+            <h1 class ="teamname" id="name_t">00팀</h1>
         </div>
 
         <div>
@@ -76,16 +76,7 @@
     </main>
 </body>
 
-<script>
-    function copyToClipBoard(){
-        const valOfDIV = document.getElementById("invite_code").innerText;
-        const textArea = document.createElement('textarea');z
-        document.body.appendChild(textArea);
-        textArea.value = valOfDIV;
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-    }
+<script src="managet.js">
 </script>
 
 </html>

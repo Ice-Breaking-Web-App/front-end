@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>create_team</title>
+    <script src="createteam.js"></script>
     <link rel = "stylesheet" type="text/css" href="../../css/menucss.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
@@ -13,7 +14,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -39,7 +40,7 @@
             <div><hr color="gray" width="97%" align="right"></div>
         </div>
         <div>
-            <form action='create_question.html';>
+            <form method="post" action="create_question.html">
                 <!--1번 문항-->
                 <div class="qlist">
                     <p>1. 팀 이름을 입력해 주세요.</p>
@@ -60,21 +61,21 @@
                 <!--팀 컬러 선택-->
                 <div class="qlist" style="text-align: center;">
                     <div class="colors">
-                        <input type = "radio" name="team_color" id="#E69C9C"><label for="#E69C9C"><img src="../../images/Ellipse 1.png"></label>
-                        <input type = "radio" name="team_color" id="#E5B79C"><label for="#E5B79C"><img src="../../images/Ellipse 2.png"></label>
-                        <input type = "radio" name="team_color" id="#E5D29C"><label for="#E5D29C"><img src="../../images/Ellipse 3.png"></label>
-                        <input type = "radio" name="team_color" id="#C1E59C"><label for="#C1E59C"><img src="../../images/Ellipse 4.png"></label>
+                        <input type = "radio" name="team_color" value="red" id="#E69C9C"><label for="#E69C9C"><img src="../../images/Ellipse 1.png"></label>
+                        <input type = "radio" name="team_color" value="orange"id="#E5B79C"><label for="#E5B79C"><img src="../../images/Ellipse 2.png"></label>
+                        <input type = "radio" name="team_color" value="yellow"id="#E5D29C"><label for="#E5D29C"><img src="../../images/Ellipse 3.png"></label>
+                        <input type = "radio" name="team_color" value="green"id="#C1E59C"><label for="#C1E59C"><img src="../../images/Ellipse 4.png"></label>
                     </div>
                     <div style="padding:20px;"></div>
                     <div class="colors">
-                        <input type = "radio" name="team_color" id="#9CCAE5"><label for="#9CCAE5"><img src="../../images/Ellipse 5.png"></label>
-                        <input type = "radio" name="team_color" id="#9CAFE5"><label for="#9CAFE5"><img src="../../images/Ellipse 6.png"></label>
-                        <input type = "radio" name="team_color" id="#A49CE5"><label for="#A49CE5"><img src="../../images/Ellipse 7.png"></label>
-                        <input type = "radio" name="team_color" id="#D79CE5"><label for="#D79CE5"><img src="../../images/Ellipse 8.png"></label>
+                        <input type = "radio" name="team_color" value="skyblue"id="#9CCAE5"><label for="#9CCAE5"><img src="../../images/Ellipse 5.png"></label>
+                        <input type = "radio" name="team_color" value="blue"id="#9CAFE5"><label for="#9CAFE5"><img src="../../images/Ellipse 6.png"></label>
+                        <input type = "radio" name="team_color" value="purple"id="#A49CE5"><label for="#A49CE5"><img src="../../images/Ellipse 7.png"></label>
+                        <input type = "radio" name="team_color" value="#pink"id="#D79CE5"><label for="#D79CE5"><img src="../../images/Ellipse 8.png"></label>
                     </div>
                 </div>
 
-                <button class="move">입장하기</button>
+                <button type="submit" class="move" onClick="nextP()">입장하기</button>
             </form>
         </div>
 
@@ -84,6 +85,7 @@
         </div>
     </main>
 </body>
+
 </html>
 
 

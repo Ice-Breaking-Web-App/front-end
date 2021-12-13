@@ -6,6 +6,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>create_question</title>
+    <script src="createquestion.js"></script>
     <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
@@ -16,7 +17,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -39,7 +40,7 @@
     <main>
 
         <div>
-            <p class="explain">00팀이 서로 친해질 수 있도록</p>
+            <p class="explain" id="exlain_team">00팀이 서로 친해질 수 있도록</p>
             <p class="explain">질문을 작성해 주세요 :)</p>
         </div>
 
@@ -48,36 +49,36 @@
                 <div>
                     <ol class="questionlist" id='questions'>
                         <li class="questions">
-                            <button class="deletequestion" type="button"
-                                onclick="deleteList(this);">X</button><br><input class="q-wrap"
-                                style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                            <br><input class="q-wrap"
+                                style="width:90%; text-align:left;" type="text" id="question1" placeholder="질문 입력">
                             <!--추천 질문으로 채워 넣기, 추천 질문 새로고침 구현 필요-->
                             <div class="recommendations_wrapper">
-                                <button class="recommendations" type="button" onclick="autofill();">MBTI</button>
-                                <button class="recommendations" type="button" onclick="autofill();">영화</button>
-                                <button class="recommendations" type="button" onclick="autofill();">음식</button>
-                                <img src="..\..\images\refresh.png" onclick='refreshRecommendations()' alt="추천 새로고침">
+                                <input type="button" class="recommendations" id="keyword1" onclick="autofill(this.id);">
+                                <input type="button" class="recommendations" id="keyword2" onclick="autofill(this.id);">
+                                <input type="button" class="recommendations" id="keyword3" onclick="autofill(this.id);">
+                                <img src="../../images/refresh.jpg" onclick='refreshRecommendations()' alt="추천 새로고침">
                             </div>
                         </li>
                         <li class="questions">
                             <button class="deletequestion" type="button"
                                 onclick="deleteList(this);">X</button><br><input class="q-wrap"
-                                style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                                style="width:90%; text-align:left;" type="text" id="question2" placeholder="질문 입력">
                         </li>
                         <li class="questions">
                             <button class="deletequestion" type="button"
                                 onclick="deleteList(this);">X</button><br><input class="q-wrap"
-                                style="width:90%; text-align:left;" type="text" id="question" placeholder="질문 입력">
+                                style="width:90%; text-align:left;" type="text" id="question3" placeholder="질문 입력">
                         </li>
                     </ol>
                 </div>
                 <div class="add">
                     <p><img src="..\..\images\more.png" onclick='addList()' alt="추가"></p>
                 </div>
-                <button class="move">다음으로</button>
+                
+                <button class="move" onclick="nextM()">다음으로</button>
             </form>
         </div>
-
+        
         <!--로고-->
         <div>
             <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
@@ -86,34 +87,7 @@
 </body>
 <script>
 
-    function addList() {
-
-        const addValue = document.createElement("addValue");
-
-        addValue.innerHTML = "<button class='deletequestion' type='button' onclick='deleteList2(this);''>X</button><br><input class='q-wrap' style='width:90%; text-align:left;' type='text' id='question' placeholder='질문 입력'>";
-
-        const li = document.createElement("li");
-
-        li.className = "questions";
-
-        li.appendChild(addValue);
-
-        li.setAttribute('id', addValue);
-
-        document
-            .getElementById('questions')
-            .appendChild(li);
-    }
-
-    function deleteList(obj) {
-        var p = obj.parentNode;
-        p.parentNode.removeChild(p);
-    }
-
-    function deleteList2(obj) {
-        var p = obj.parentNode.parentNode;
-        p.parentNode.removeChild(p);
-    }
+    
 </script>
 
 </html>

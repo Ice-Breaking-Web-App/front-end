@@ -12,7 +12,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -38,7 +38,7 @@
         <!--텍스트-->
         <div>
             <p class="explain">팀이 생성되었습니다!</p>
-            <p class="explain">00팀의 팀원들을 초대해 주세요.</p>
+            <p class="explain" id="exp_name">00팀의 팀원들을 초대해 주세요.</p>
         </div>
 
         <div class="text-wrap">
@@ -58,19 +58,6 @@
 
 </main>
 </body>
-
-
-<script>
-    function copyToClipBoard(){
-        const valOfDIV = document.getElementById("invite_code").innerText;
-        const textArea = document.createElement('textarea');z
-        document.body.appendChild(textArea);
-        textArea.value = valOfDIV;
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-    }
-</script>
-
+<script src="createinvite.js"></script>
 </html>
 

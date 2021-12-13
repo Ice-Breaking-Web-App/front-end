@@ -6,6 +6,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <title>create_member</title>
+    <script src="creatmember.js"></script>
     <link rel="stylesheet" type="text/css" href="../../css/menucss.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mint.css" />
@@ -16,7 +17,7 @@
     <!--홈, 메뉴 버튼-->
     <section>
         <a href="../all/home.html" target="">
-            <img src="\images\home.png" alt="홈" class="home">
+            <img src="../../images/home.png" alt="홈" class="home">
         </a>
 
         <input type="checkbox" id="menuicon">
@@ -44,25 +45,30 @@
         </div>
 
         <div>
-            <p class="explain">00팀의 팀원들을 알려주세요</p>
+            <p id = "explain_name"class="explain">00팀의 팀원들을 알려주세요</p>
             <p class="explain" style="color:gray;">* 팀 생성 후에는 수정할 수 없습니다.</p>
         </div>
 
-        <form method="post" action="manage_team.html">
+        <form method="post" action="create_invitecode.html">
             <div>
                 <ol class="memberlist" id='member_names'>
                     <li class="members">
                         <img src="..\..\images\leadericon.png" style="width:50px; height:50px;"
-                            alt="팀장아이콘"><span>팀장이름</span>&nbsp;</p>
+                            alt="팀장아이콘"><span id="name_leader">팀장이름</span>&nbsp;</p>
                     </li>
                     <li class="members">
                         <img src="..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span><input
-                                class="membername" type="text" id="member_name" placeholder="이름"></span><button
+                                class="membername" type="text" id="member_name1" placeholder="이름"></span><button
                             class="deletemember" type="button" onclick="deleteList(this);">X</button>
                     </li>
                     <li class="members">
                         <img src="..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span><input
-                                class="membername" type="text" id="member_name" placeholder="이름"></span><button
+                                class="membername" type="text" id="member_name2" placeholder="이름"></span><button
+                            class="deletemember" type="button" onclick="deleteList(this);">X</button>
+                    </li>
+                    <li class="members">
+                        <img src="..\..\images\membericon.png" style="width:50px; height:50px;" alt="팀원아이콘"><span><input
+                                class="membername" type="text" id="member_name3" placeholder="이름"></span><button
                             class="deletemember" type="button" onclick="deleteList(this);">X</button>
                     </li>
                 </ol>
@@ -71,51 +77,13 @@
             <div class="add">
                 <p><img src="..\..\images\more.png" onclick='addList()' alt="추가" border="0" align="center"></p>
             </div>
-            <button class="move">완료하기</button>
+            <input type="button" id = "move" onclick="comT()" value="완료하기">
         </form>
 
         <div>
+            
             <p><img src="..\..\images\logo.png" alt="로고" class="logo1"></p>
         </div>
     </main>
 </body>
-
-<script>
-
-    function addList() {
-
-        const addValue = document.createElement("addValue");
-        const addValue2 = document.createElement("addValue2");
-        const addValue3 = document.createElement("addValue3");
-
-        addValue.innerHTML = "<img src='../../images/membericon.png' style='width:50px; height:50px;' alt='팀원아이콘'>";
-        addValue2.innerHTML = "<span><input class='membername' type='text' id='member_name' placeholder='이름'></span>";
-        addValue3.innerHTML = "<button class='deletemember' type='button' onclick='deleteList2(this);'>X</button>";
-
-        const li = document.createElement("li");
-
-        li.className = "members";
-
-        li.appendChild(addValue);
-        li.appendChild(addValue2);
-        li.appendChild(addValue3);
-
-        li.setAttribute('id', addValue, addValue2, addValue3);
-
-        document
-            .getElementById('member_names')
-            .appendChild(li);
-    }
-
-    function deleteList(obj) {
-        var p = obj.parentNode;
-        p.parentNode.removeChild(p);
-    }
-
-    function deleteList2(obj) {
-        var p = obj.parentNode.parentNode;
-        p.parentNode.removeChild(p);
-    }
-</script>
-
 </html>
